@@ -1,0 +1,67 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:viskoO="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-operator.owl#"
+    xmlns:pmlp="http://inference-web.org/2.0/pml-provenance.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:viskoS="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-service.owl#">
+  <owl:Ontology>
+    <owl:imports rdf:resource="http://inference-web.org/2.0/pml-provenance.owl"/>
+    <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-operator.owl"/>
+    <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-service.owl"/>
+  </owl:Ontology>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-installed/master/package_ghostscript.owl#ps2pdf">
+    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-installed/master/ps2pdf.owl#ps2pdfService</viskoS:supportedByOWLSService>
+    <viskoS:supportedBy>
+      <viskoS:Toolkit rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-installed/master/ghostscript.owl#ghostscript">
+        <rdfs:label>GhostScript (GS)</rdfs:label>
+        <rdfs:comment>GhostScript PostScript and PDF Tools</rdfs:comment>
+      </viskoS:Toolkit>
+    </viskoS:supportedBy>
+    <viskoS:implementsOperator>
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-installed/master/ps2pdf-operator.owl#ps2pdf-operator">
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/PDF.owl#PDF"/>
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ps2pdf-operator</pmlp:hasName>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
+        <rdfs:label>PS to PDF</rdfs:label>
+        <rdfs:comment>Converts PostScript (PS) to Portable Document Format (PDF)</rdfs:comment>
+      </viskoO:Transformer>
+    </viskoS:implementsOperator>
+    <rdfs:label>PS to PDF</rdfs:label>
+    <rdfs:comment>Converts PostScript (PS) to Portable Document Format (PDF)</rdfs:comment>
+  </viskoS:Service>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-installed/master/package_ghostscript.owl#pdf2png">
+    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-installed/master/pdf2png.owl#pdf2pngService</viskoS:supportedByOWLSService>
+    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-installed/master/ghostscript.owl#ghostscript"/>
+    <viskoS:implementsOperator>
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-installed/master/pdf2png-operator.owl#pdf2png-operator">
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/PNG.owl#PNG"/>
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >pdf2png-operator</pmlp:hasName>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/PDF.owl#PDF"/>
+        <rdfs:label>PDF to PNG</rdfs:label>
+        <rdfs:comment>Converts Portable Document Format (PDF) to Portable Network Graphic (PNG)</rdfs:comment>
+      </viskoO:Transformer>
+    </viskoS:implementsOperator>
+    <rdfs:label>PDF to PNG</rdfs:label>
+    <rdfs:comment>Converts Portable Document Format (PDF) to Portable Network Graphic (PNG)</rdfs:comment>
+  </viskoS:Service>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-installed/master/package_ghostscript.owl#ps2png">
+    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-installed/master/ps2png.owl#ps2pngService</viskoS:supportedByOWLSService>
+    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-installed/master/ghostscript.owl#ghostscript"/>
+    <viskoS:implementsOperator>
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-installed/master/ps2png-operator.owl#ps2png-operator">
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/PNG.owl#PNG"/>
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ps2png-operator</pmlp:hasName>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
+        <rdfs:label>PS to PNG</rdfs:label>
+        <rdfs:comment>Converts PostScript (PS) to Portable Network Graphic (PNG)</rdfs:comment>
+      </viskoO:Transformer>
+    </viskoS:implementsOperator>
+    <rdfs:label>PS to PNG</rdfs:label>
+    <rdfs:comment>Converts PostScript (PS) to Portable Network Graphic (PNG)</rdfs:comment>
+  </viskoS:Service>
+</rdf:RDF>
