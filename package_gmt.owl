@@ -288,7 +288,7 @@
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#nearneighbor">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/nearneighbor.owl#nearneighborService"/>
     <viskoS:supportedBy>
-      <viskoS:Toolkit rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gmt.owl#gmt">
+      <viskoS:Toolkit rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt">
         <rdfs:label>Generic Mapping Tools</rdfs:label>
         <rdfs:comment>Generic Mapping Tools</rdfs:comment>
       </viskoS:Toolkit>
@@ -308,7 +308,7 @@
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#csv2tabular">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/csv2tabular.owl#csv2tabularService"/>
-    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gmt.owl#gmt"/>
+    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
     <viskoS:implementsOperator>
       <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/csv2tabular-operator.owl#csv2tabular-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/SPACEDELIMITEDTABULARASCII.owl#SPACEDELIMITEDTABULARASCII"/>
@@ -324,7 +324,7 @@
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#grdimage">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/grdimage.owl#grdimageService"/>
-    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gmt.owl#gmt"/>
+    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
     <viskoS:implementsOperator>
       <viskoO:Mapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#grdimage-operator">
         <viskoO:mapsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/views/contour-lines.owl#contour-lines"/>
@@ -341,7 +341,7 @@
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#surface">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/surface.owl#surfaceService"/>
-    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gmt.owl#gmt"/>
+    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
     <viskoS:implementsOperator>
       <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/surface-operator.owl#surface-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/NETCDFGMT.owl#NETCDFGMT"/>
@@ -357,7 +357,7 @@
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#psxy">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/psxy.owl#psxyService"/>
-    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gmt.owl#gmt"/>
+    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
     <viskoS:implementsOperator>
       <viskoO:Mapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#psxy-operator">
         <viskoO:mapsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/views/plot-2D.owl#plot-2D"/>
@@ -374,7 +374,7 @@
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#grdcontour">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/grdcontour.owl#grdcontourService"/>
-    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gmt.owl#gmt"/>
+    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
     <viskoS:implementsOperator>
       <viskoO:Mapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#grdcontour-operator">
         <viskoO:mapsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/views/raster.owl#raster"/>

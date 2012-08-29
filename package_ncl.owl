@@ -16,7 +16,7 @@
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#gsn_csm_xy2_time_series">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gsn_csm_xy2_time_series.owl#gsn_csm_xy2_time_seriesService"/>
     <viskoS:supportedBy>
-      <viskoS:Toolkit rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/ncl.owl#ncl">
+      <viskoS:Toolkit rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#ncl">
         <rdfs:label>NCAR Command Language</rdfs:label>
         <rdfs:comment>NCAR Command Language</rdfs:comment>
       </viskoS:Toolkit>
@@ -299,7 +299,7 @@
   </viskoS:InputParameterBindings>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#gsn_csm_contour_map_raster">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gsn_csm_contour_map_raster.owl#gsn_csm_contour_map_rasterService"/>
-    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/ncl.owl#ncl"/>
+    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#ncl"/>
     <viskoS:implementsOperator>
       <viskoO:Mapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#gsn_csm_contour_map_raster-operator">
         <viskoO:mapsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/views/raster.owl#raster"/>
@@ -316,7 +316,7 @@
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#gsn_csm_contour_map">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gsn_csm_contour_map.owl#gsn_csm_contour_mapService"/>
-    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/ncl.owl#ncl"/>
+    <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#ncl"/>
     <viskoS:implementsOperator>
       <viskoO:Mapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#gsn_csm_contour_map-operator">
         <viskoO:mapsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/views/contour-lines.owl#contour-lines"/>
