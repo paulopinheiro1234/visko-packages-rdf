@@ -18,7 +18,7 @@
     </viskoO:partOfViewerSet>
     <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >xdmf-viewer</pmlp:hasName>
-    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/XDMF.owl#XDMF"/>
+    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XDMF.owl#XDMF"/>
     <rdfs:label>XDMF Viewer</rdfs:label>
     <rdfs:comment>XDMF Viewer of the ParaView Distribution</rdfs:comment>
   </viskoO:Viewer>

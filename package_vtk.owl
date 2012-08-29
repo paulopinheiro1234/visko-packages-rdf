@@ -14,7 +14,7 @@
     <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-service.owl"/>
   </owl:Ontology>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkPolyDataMapper">
-    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#vtkPolyDataMapperService</viskoS:supportedByOWLSService>
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#vtkPolyDataMapperService"/>
     <viskoS:supportedBy>
       <viskoS:Toolkit rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtk.owl#vtk">
         <rdfs:label>Visualization Toolkit (VTK)</rdfs:label>
@@ -23,10 +23,10 @@
     </viskoS:supportedBy>
     <viskoS:implementsOperator>
       <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper-operator.owl#vtkPolyDataMapper-operator">
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/JPEG.owl#JPEG"/>
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkPolyDataMapper-operator</pmlp:hasName>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/VTKPOLYDATA.owl#VTKPOLYDATA"/>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKPOLYDATA.owl#VTKPOLYDATA"/>
         <rdfs:label>vtkPolyDataMapper</rdfs:label>
         <rdfs:comment>Converts poly data into JPEG</rdfs:comment>
       </viskoO:Transformer>
@@ -35,14 +35,14 @@
     <rdfs:comment>Converts poly data into JPEG</rdfs:comment>
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#float2ShortThr">
-    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/float2ShortThr.owl#float2ShortThrService</viskoS:supportedByOWLSService>
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/float2ShortThr.owl#float2ShortThrService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/float2ShortThr-operator.owl#float2ShortThr-operator">
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/BINARYSHORTINTARRAYLENDIAN.owl#BINARYSHORTINTARRAYLENDIAN"/>
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYSHORTINTARRAYLENDIAN.owl#BINARYSHORTINTARRAYLENDIAN"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >float2ShortThr-operator</pmlp:hasName>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/BINARYFLOATARRAYLENDIAN.owl#BINARYFLOATARRAYLENDIAN"/>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYFLOATARRAYLENDIAN.owl#BINARYFLOATARRAYLENDIAN"/>
         <rdfs:label>float2ShortThr</rdfs:label>
         <rdfs:comment>Converts float arrays to short ints</rdfs:comment>
       </viskoO:Transformer>
@@ -255,14 +255,14 @@
     </viskoS:declaresBindings>
   </viskoS:InputParameterBindings>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReaderUnsignedInts">
-    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReaderUnsignedInts.owl#vtkImageDataReaderUnsignedIntsService</viskoS:supportedByOWLSService>
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReaderUnsignedInts.owl#vtkImageDataReaderUnsignedIntsService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReaderUnsignedInts-operator.owl#vtkImageDataReaderUnsignedInts-operator">
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkImageDataReaderUnsignedInts-operator</pmlp:hasName>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/BINARYUNSIGNEDINTARRAYLENDIAN.owl#BINARYUNSIGNEDINTARRAYLENDIAN"/>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYUNSIGNEDINTARRAYLENDIAN.owl#BINARYUNSIGNEDINTARRAYLENDIAN"/>
         <rdfs:label>vtkImageDataReaderUnsignedInts</rdfs:label>
         <rdfs:comment>Convert binary unsigned interger array into vtkImageData</rdfs:comment>
       </viskoO:Transformer>
@@ -271,14 +271,14 @@
     <rdfs:comment>Convert binary unsigned interger array into vtkImageData</rdfs:comment>
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#int2Short">
-    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/int2Short.owl#int2ShortService</viskoS:supportedByOWLSService>
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/int2Short.owl#int2ShortService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/int2Short-operator.owl#int2Short-operator">
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/BINARYSHORTINTARRAYLENDIAN.owl#BINARYSHORTINTARRAYLENDIAN"/>
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYSHORTINTARRAYLENDIAN.owl#BINARYSHORTINTARRAYLENDIAN"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >int2Short-operator</pmlp:hasName>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/BINARYINTARRAYLENDIAN.owl#BINARYINTARRAYLENDIAN"/>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYINTARRAYLENDIAN.owl#BINARYINTARRAYLENDIAN"/>
         <rdfs:label>int2Short</rdfs:label>
         <rdfs:comment>Converts integer arrays to short integers</rdfs:comment>
       </viskoO:Transformer>
@@ -287,15 +287,15 @@
     <rdfs:comment>Converts integer arrays to short integers</rdfs:comment>
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkVolume">
-    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#vtkVolumeService</viskoS:supportedByOWLSService>
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#vtkVolumeService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:Mapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkVolume-operator">
         <viskoO:mapsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/views/volume.owl#volume"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/JPEG.owl#JPEG"/>
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkVolume-operator</pmlp:hasName>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/VTKIMAGEDATASHORTINTS.owl#VTKIMAGEDATASHORTINTS"/>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATASHORTINTS.owl#VTKIMAGEDATASHORTINTS"/>
         <rdfs:label>vtkVolume</rdfs:label>
         <rdfs:comment>Convert vtkImageData of short integers into a volume JPEG</rdfs:comment>
       </viskoO:Mapper>
@@ -656,15 +656,15 @@
     </viskoS:declaresBindings>
   </viskoS:InputParameterBindings>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkContourFilter">
-    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter.owl#vtkContourFilterService</viskoS:supportedByOWLSService>
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter.owl#vtkContourFilterService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:Mapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkContourFilter-operator">
         <viskoO:mapsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/views/iso-surfaces.owl#iso-surfaces"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/VTKPOLYDATA.owl#VTKPOLYDATA"/>
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKPOLYDATA.owl#VTKPOLYDATA"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkContourFilter-operator</pmlp:hasName>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
         <rdfs:label>vtkContourFilter</rdfs:label>
         <rdfs:comment>Generates isosurfaces from vtkImageData</rdfs:comment>
       </viskoO:Mapper>
@@ -915,15 +915,15 @@
     </viskoS:declaresBindings>
   </viskoS:InputParameterBindings>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkDataSetMapper">
-    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper.owl#vtkDataSetMapperService</viskoS:supportedByOWLSService>
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper.owl#vtkDataSetMapperService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:Mapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkDataSetMapper-operator">
         <viskoO:mapsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/views/raster.owl#raster"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/JPEG.owl#JPEG"/>
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkDataSetMapper-operator</pmlp:hasName>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
         <rdfs:label>vtkDataSetMapper</rdfs:label>
         <rdfs:comment>Convert vtkImageData into a raster image</rdfs:comment>
       </viskoO:Mapper>
@@ -932,14 +932,14 @@
     <rdfs:comment>Convert vtkImageData into a raster image</rdfs:comment>
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReaderFloat">
-    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReaderFloat.owl#vtkImageDataReaderFloatService</viskoS:supportedByOWLSService>
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReaderFloat.owl#vtkImageDataReaderFloatService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReaderFloat-operator.owl#vtkImageDataReaderFloat-operator">
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkImageDataReaderFloat-operator</pmlp:hasName>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/BINARYFLOATARRAYLENDIAN.owl#BINARYFLOATARRAYLENDIAN"/>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYFLOATARRAYLENDIAN.owl#BINARYFLOATARRAYLENDIAN"/>
         <rdfs:label>vtkImageDataReaderFloat</rdfs:label>
         <rdfs:comment>Convert binary float arrays into vtkImageData</rdfs:comment>
       </viskoO:Transformer>
@@ -948,14 +948,14 @@
     <rdfs:comment>Convert binary float arrays into vtkImageData</rdfs:comment>
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkTIFFReader">
-    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkTIFFReader.owl#vtkTIFFReaderService</viskoS:supportedByOWLSService>
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkTIFFReader.owl#vtkTIFFReaderService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkTIFFReader-operator.owl#vtkTIFFReader-operator">
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkTIFFReader-operator</pmlp:hasName>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/TIFF.owl#TIFF"/>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/TIFF.owl#TIFF"/>
         <rdfs:label>vtkTIFFReader</rdfs:label>
         <rdfs:comment>Convert TIFF images into vtkImageData</rdfs:comment>
       </viskoO:Transformer>
@@ -964,14 +964,14 @@
     <rdfs:comment>Convert TIFF images into vtkImageData</rdfs:comment>
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReader">
-    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader.owl#vtkImageDataReaderService</viskoS:supportedByOWLSService>
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader.owl#vtkImageDataReaderService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader-operator.owl#vtkImageDataReader-operator">
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/VTKIMAGEDATASHORTINTS.owl#VTKIMAGEDATASHORTINTS"/>
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATASHORTINTS.owl#VTKIMAGEDATASHORTINTS"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkImageDataReader-operator</pmlp:hasName>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/BINARYSHORTINTARRAYLENDIAN.owl#BINARYSHORTINTARRAYLENDIAN"/>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYSHORTINTARRAYLENDIAN.owl#BINARYSHORTINTARRAYLENDIAN"/>
         <rdfs:label>vtkImageDataReader</rdfs:label>
         <rdfs:comment>Converts binary short integer arrays into vtk image data of short integers</rdfs:comment>
       </viskoO:Transformer>

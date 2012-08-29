@@ -14,7 +14,7 @@
     <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-service.owl"/>
   </owl:Ontology>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#gsn_csm_xy2_time_series">
-    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gsn_csm_xy2_time_series.owl#gsn_csm_xy2_time_seriesService</viskoS:supportedByOWLSService>
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gsn_csm_xy2_time_series.owl#gsn_csm_xy2_time_seriesService"/>
     <viskoS:supportedBy>
       <viskoS:Toolkit rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/ncl.owl#ncl">
         <rdfs:label>NCAR Command Language</rdfs:label>
@@ -24,10 +24,10 @@
     <viskoS:implementsOperator>
       <viskoO:Mapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#gsn_csm_xy2_time_series-operator">
         <viskoO:mapsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/views/XYPlot.owl#XYPlot"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >gsn_csm_xy2_time_series-operator</pmlp:hasName>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/NETCDF.owl#NETCDF"/>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/NETCDF.owl#NETCDF"/>
         <rdfs:label>gsn_csm_xy2_time_series</rdfs:label>
         <rdfs:comment>Generate time series plot from set of 1D arrays</rdfs:comment>
       </viskoO:Mapper>
@@ -298,15 +298,15 @@
     </viskoS:declaresBindings>
   </viskoS:InputParameterBindings>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#gsn_csm_contour_map_raster">
-    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gsn_csm_contour_map_raster.owl#gsn_csm_contour_map_rasterService</viskoS:supportedByOWLSService>
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gsn_csm_contour_map_raster.owl#gsn_csm_contour_map_rasterService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/ncl.owl#ncl"/>
     <viskoS:implementsOperator>
       <viskoO:Mapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#gsn_csm_contour_map_raster-operator">
         <viskoO:mapsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/views/raster.owl#raster"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >gsn_csm_contour_map_raster-operator</pmlp:hasName>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/NETCDF.owl#NETCDF"/>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/NETCDF.owl#NETCDF"/>
         <rdfs:label>gsn_csm_contour_map_raster</rdfs:label>
         <rdfs:comment>Generate raster map from 2D gridded netCDF</rdfs:comment>
       </viskoO:Mapper>
@@ -315,15 +315,15 @@
     <rdfs:comment>Generate raster map from 2D gridded netCDF</rdfs:comment>
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#gsn_csm_contour_map">
-    <viskoS:supportedByOWLSService>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gsn_csm_contour_map.owl#gsn_csm_contour_mapService</viskoS:supportedByOWLSService>
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/gsn_csm_contour_map.owl#gsn_csm_contour_mapService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/ncl.owl#ncl"/>
     <viskoS:implementsOperator>
       <viskoO:Mapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ncl.owl#gsn_csm_contour_map-operator">
         <viskoO:mapsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/views/contour-lines.owl#contour-lines"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
+        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >gsn_csm_contour_map-operator</pmlp:hasName>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/NETCDF.owl#NETCDF"/>
+        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/NETCDF.owl#NETCDF"/>
         <rdfs:label>gsn_csm_contour_map</rdfs:label>
         <rdfs:comment>Generate contour map from 2D gridded netCDF</rdfs:comment>
       </viskoO:Mapper>
