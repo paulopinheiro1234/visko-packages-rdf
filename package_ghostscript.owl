@@ -20,7 +20,7 @@
       </viskoS:Toolkit>
     </viskoS:supportedBy>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/ps2pdf-operator.owl#ps2pdf-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ghostscript.owl#ps2pdf-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PDF.owl#PDF"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >ps2pdf-operator</pmlp:hasName>
@@ -36,7 +36,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/ps2png.owl#ps2pngService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ghostscript.owl#ghostscript"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/ps2png-operator.owl#ps2png-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ghostscript.owl#ps2png-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PNG.owl#PNG"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >ps2png-operator</pmlp:hasName>
@@ -52,7 +52,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/pdf2png.owl#pdf2pngService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ghostscript.owl#ghostscript"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/pdf2png-operator.owl#pdf2png-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ghostscript.owl#pdf2png-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PNG.owl#PNG"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >pdf2png-operator</pmlp:hasName>

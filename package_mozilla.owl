@@ -12,14 +12,12 @@
   <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_mozilla.owl#firefox-text-viewer">
     <viskoO:partOfViewerSet>
       <viskoO:ViewerSet rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_mozilla.owl#mozilla-firefox">
-        <rdfs:label>Internet Explorer</rdfs:label>
-        <rdfs:comment>Internet Explorer Web Browser</rdfs:comment>
+        <rdfs:label>Mozilla Firefox</rdfs:label>
+        <rdfs:comment>Mozilla Firefox Web Browser</rdfs:comment>
       </viskoO:ViewerSet>
     </viskoO:partOfViewerSet>
     <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >firefox-text-viewer</pmlp:hasName>
-    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
-    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VNDLATEXZ.owl#VNDLATEXZ"/>
     <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PLAINTEXT.owl#PLAINTEXT"/>
     <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PLAIN.owl#PLAIN"/>
     <rdfs:label>Plain Text Viewer</rdfs:label>

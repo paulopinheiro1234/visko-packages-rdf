@@ -22,7 +22,7 @@
       </viskoS:Toolkit>
     </viskoS:supportedBy>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper-operator.owl#vtkPolyDataMapper-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkPolyDataMapper-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkPolyDataMapper-operator</pmlp:hasName>
@@ -38,7 +38,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/float2ShortThr.owl#float2ShortThrService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/float2ShortThr-operator.owl#float2ShortThr-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#float2ShortThr-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYSHORTINTARRAYLENDIAN.owl#BINARYSHORTINTARRAYLENDIAN"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >float2ShortThr-operator</pmlp:hasName>
@@ -258,7 +258,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReaderUnsignedInts.owl#vtkImageDataReaderUnsignedIntsService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReaderUnsignedInts-operator.owl#vtkImageDataReaderUnsignedInts-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReaderUnsignedInts-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkImageDataReaderUnsignedInts-operator</pmlp:hasName>
@@ -274,7 +274,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/int2Short.owl#int2ShortService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/int2Short-operator.owl#int2Short-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#int2Short-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYSHORTINTARRAYLENDIAN.owl#BINARYSHORTINTARRAYLENDIAN"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >int2Short-operator</pmlp:hasName>
@@ -935,7 +935,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReaderFloat.owl#vtkImageDataReaderFloatService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReaderFloat-operator.owl#vtkImageDataReaderFloat-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReaderFloat-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkImageDataReaderFloat-operator</pmlp:hasName>
@@ -951,7 +951,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkTIFFReader.owl#vtkTIFFReaderService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkTIFFReader-operator.owl#vtkTIFFReader-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkTIFFReader-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkTIFFReader-operator</pmlp:hasName>
@@ -967,7 +967,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader.owl#vtkImageDataReaderService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader-operator.owl#vtkImageDataReader-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReader-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATASHORTINTS.owl#VTKIMAGEDATASHORTINTS"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkImageDataReader-operator</pmlp:hasName>

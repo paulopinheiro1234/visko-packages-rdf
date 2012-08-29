@@ -294,7 +294,7 @@
       </viskoS:Toolkit>
     </viskoS:supportedBy>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/nearneighbor-operator.owl#nearneighbor-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#nearneighbor-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/NETCDFGMT.owl#NETCDFGMT"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >nearneighbor-operator</pmlp:hasName>
@@ -310,7 +310,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/csv2tabular.owl#csv2tabularService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/csv2tabular-operator.owl#csv2tabular-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#csv2tabular-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/SPACEDELIMITEDTABULARASCII.owl#SPACEDELIMITEDTABULARASCII"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >csv2tabular-operator</pmlp:hasName>
@@ -343,7 +343,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/surface.owl#surfaceService"/>
     <viskoS:supportedBy rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/surface-operator.owl#surface-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#surface-operator">
         <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/NETCDFGMT.owl#NETCDFGMT"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >surface-operator</pmlp:hasName>

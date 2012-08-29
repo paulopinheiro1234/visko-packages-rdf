@@ -44,8 +44,6 @@
     <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_iexplorer.owl#internet-explorer"/>
     <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >iexplorer-text-viewer</pmlp:hasName>
-    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
-    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VNDLATEXZ.owl#VNDLATEXZ"/>
     <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PLAINTEXT.owl#PLAINTEXT"/>
     <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PLAIN.owl#PLAIN"/>
     <rdfs:label>Plain Text Viewer</rdfs:label>
