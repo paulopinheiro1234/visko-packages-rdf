@@ -9,21 +9,13 @@
     <owl:imports rdf:resource="http://inference-web.org/2.0/pml-provenance.owl"/>
     <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-operator.owl"/>
   </owl:Ontology>
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/firefox-html-viewer.owl#firefox-html-viewer">
+  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_mozilla.owl#firefox-text-viewer">
     <viskoO:partOfViewerSet>
-      <viskoO:ViewerSet rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/mozilla-firefox.owl#mozilla-firefox">
+      <viskoO:ViewerSet rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_mozilla.owl#mozilla-firefox">
         <rdfs:label>Internet Explorer</rdfs:label>
         <rdfs:comment>Internet Explorer Web Browser</rdfs:comment>
       </viskoO:ViewerSet>
     </viskoO:partOfViewerSet>
-    <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >firefox-html-viewer</pmlp:hasName>
-    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/HTML.owl#HTML"/>
-    <rdfs:label>HyperText Markup Language (HTML) Viewer</rdfs:label>
-    <rdfs:comment>Renders HTML documents.</rdfs:comment>
-  </viskoO:Viewer>
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/firefox-text-viewer.owl#firefox-text-viewer">
-    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/mozilla-firefox.owl#mozilla-firefox"/>
     <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >firefox-text-viewer</pmlp:hasName>
     <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
@@ -33,8 +25,24 @@
     <rdfs:label>Plain Text Viewer</rdfs:label>
     <rdfs:comment>Just a plain old text viewer.</rdfs:comment>
   </viskoO:Viewer>
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/firefox-browser-image-viewer.owl#firefox-browser-image-viewer">
-    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/mozilla-firefox.owl#mozilla-firefox"/>
+  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_mozilla.owl#firefox-pdf-viewer">
+    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_mozilla.owl#mozilla-firefox"/>
+    <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >firefox-pdf-viewer</pmlp:hasName>
+    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/PDF.owl#PDF"/>
+    <rdfs:label>Adobe Portable Document Format (PDF) Viewer</rdfs:label>
+    <rdfs:comment>Renders PDF document and allows for zooming.</rdfs:comment>
+  </viskoO:Viewer>
+  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_mozilla.owl#firefox-html-viewer">
+    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_mozilla.owl#mozilla-firefox"/>
+    <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >firefox-html-viewer</pmlp:hasName>
+    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/HTML.owl#HTML"/>
+    <rdfs:label>HyperText Markup Language (HTML) Viewer</rdfs:label>
+    <rdfs:comment>Renders HTML documents.</rdfs:comment>
+  </viskoO:Viewer>
+  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_mozilla.owl#firefox-browser-image-viewer">
+    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_mozilla.owl#mozilla-firefox"/>
     <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >firefox-browser-image-viewer</pmlp:hasName>
     <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/JPEG.owl#JPEG"/>
@@ -42,13 +50,5 @@
     <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/GIF.owl#GIF"/>
     <rdfs:label>Mozilla Firefox Browser Image Viewer</rdfs:label>
     <rdfs:comment>Views a few standard image formats</rdfs:comment>
-  </viskoO:Viewer>
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/firefox-pdf-viewer.owl#firefox-pdf-viewer">
-    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/mozilla-firefox.owl#mozilla-firefox"/>
-    <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >firefox-pdf-viewer</pmlp:hasName>
-    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/PDF.owl#PDF"/>
-    <rdfs:label>Adobe Portable Document Format (PDF) Viewer</rdfs:label>
-    <rdfs:comment>Renders PDF document and allows for zooming.</rdfs:comment>
   </viskoO:Viewer>
 </rdf:RDF>
