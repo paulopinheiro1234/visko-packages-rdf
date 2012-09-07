@@ -9,44 +9,48 @@
     <owl:imports rdf:resource="http://inference-web.org/2.0/pml-provenance.owl"/>
     <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-operator.owl"/>
   </owl:Ontology>
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_iexplorer.owl#iexplorer-html-viewer">
+  <viskoO:Viewer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_iexplorer.owl#iexplorer-text-viewer">
     <viskoO:partOfViewerSet>
-      <viskoO:ViewerSet rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_iexplorer.owl#internet-explorer">
+      <viskoO:ViewerSet rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_iexplorer.owl#internet-explorer">
         <rdfs:label>Internet Explorer</rdfs:label>
         <rdfs:comment>Internet Explorer Web Browser</rdfs:comment>
       </viskoO:ViewerSet>
     </viskoO:partOfViewerSet>
     <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >iexplorer-html-viewer</pmlp:hasName>
-    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/HTML.owl#HTML"/>
-    <rdfs:label>HyperText Markup Language (HTML) Viewer</rdfs:label>
-    <rdfs:comment>Renders HTML documents.</rdfs:comment>
+    >iexplorer-text-viewer</pmlp:hasName>
+    <viskoO:operatesOnDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PLAINTEXT.owl#PLAINTEXT"/>
+    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PLAIN.owl#PLAIN"/>
+    <rdfs:label>Plain Text Viewer</rdfs:label>
+    <rdfs:comment>Just a plain old text viewer</rdfs:comment>
   </viskoO:Viewer>
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_iexplorer.owl#iexplorer-pdf-viewer">
-    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_iexplorer.owl#internet-explorer"/>
+  <viskoO:Viewer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_iexplorer.owl#iexplorer-pdf-viewer">
+    <viskoO:partOfViewerSet rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_iexplorer.owl#internet-explorer"/>
     <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >iexplorer-pdf-viewer</pmlp:hasName>
+    <viskoO:operatesOnDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PDF.owl#PDF"/>
     <rdfs:label>Adobe Portable Document Format (PDF) Viewer</rdfs:label>
     <rdfs:comment>Renders PDF document and allows for zooming.</rdfs:comment>
   </viskoO:Viewer>
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_iexplorer.owl#iexplorer-browser-image-viewer">
-    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_iexplorer.owl#internet-explorer"/>
+  <viskoO:Viewer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_iexplorer.owl#iexplorer-html-viewer">
+    <viskoO:partOfViewerSet rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_iexplorer.owl#internet-explorer"/>
+    <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >iexplorer-html-viewer</pmlp:hasName>
+    <viskoO:operatesOnDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/HTML.owl#HTML"/>
+    <rdfs:label>HyperText Markup Language (HTML) Viewer</rdfs:label>
+    <rdfs:comment>Renders HTML documents.</rdfs:comment>
+  </viskoO:Viewer>
+  <viskoO:Viewer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_iexplorer.owl#iexplorer-browser-image-viewer">
+    <viskoO:partOfViewerSet rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_iexplorer.owl#internet-explorer"/>
     <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >iexplorer-browser-image-viewer</pmlp:hasName>
+    <viskoO:operatesOnDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
     <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PNG.owl#PNG"/>
     <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/GIF.owl#GIF"/>
     <rdfs:label>Internet Explorer Browser Image Viewer</rdfs:label>
     <rdfs:comment>Views a few standard image formats</rdfs:comment>
-  </viskoO:Viewer>
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_iexplorer.owl#iexplorer-text-viewer">
-    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_iexplorer.owl#internet-explorer"/>
-    <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >iexplorer-text-viewer</pmlp:hasName>
-    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PLAINTEXT.owl#PLAINTEXT"/>
-    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PLAIN.owl#PLAIN"/>
-    <rdfs:label>Plain Text Viewer</rdfs:label>
-    <rdfs:comment>Just a plain old text viewer</rdfs:comment>
   </viskoO:Viewer>
 </rdf:RDF>

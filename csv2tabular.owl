@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <rdf:RDF
-    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/csv2tabular.owl"
     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
     xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
+    xmlns="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/csv2tabular.owl"
     xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
     xmlns:viskoS="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-service.owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -13,7 +13,7 @@
     xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/csv2tabular.owl">
+  xml:base="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/csv2tabular.owl">
   <owl:Ontology rdf:about="">
     <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Grounding.owl"/>
     <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Profile.owl"/>
