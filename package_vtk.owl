@@ -1,1003 +1,1320 @@
 <rdf:RDF
+    xmlns:viskoV="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:viskoP="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-plot.owl#"
+    xmlns:owlsService="http://www.daml.org/services/owl-s/1.2/Service.owl#"
     xmlns:owlsProcess="http://www.daml.org/services/owl-s/1.2/Process.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:viskoS="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-service.owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:viskoO="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-operator.owl#"
     xmlns:pmlp="http://inference-web.org/2.0/pml-provenance.owl#"
-    xmlns:esip="http://www.ordnancesurvey.co.uk/ontology/Datatypes.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:viskoS="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-service.owl#">
-  <owl:Ontology>
-    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl"/>
-    <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-plot.owl"/>
-    <owl:imports rdf:resource="http://trust.utep.edu/visko/ontology/esip-data.owl"/>
-    <owl:imports rdf:resource="http://inference-web.org/2.0/pml-provenance.owl"/>
-    <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-operator.owl"/>
-    <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-service.owl"/>
-  </owl:Ontology>
-  <viskoS:Service rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkTIFFReader">
-    <viskoS:supportedByOWLSService rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkTIFFReader.owl#vtkTIFFReaderService"/>
-    <viskoS:supportedBy>
-      <viskoS:Toolkit rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtk">
+    xmlns:viskoO="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-operator.owl#">
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#float2ShortThr">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/float2ShortThr.owl#float2ShortThrService"/>
+    <viskoS:supportedByToolkit>
+      <viskoS:Toolkit rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk">
         <rdfs:label>Visualization Toolkit (VTK)</rdfs:label>
         <rdfs:comment>Visualization Toolkit (VTK) Library</rdfs:comment>
       </viskoS:Toolkit>
-    </viskoS:supportedBy>
+    </viskoS:supportedByToolkit>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkTIFFReader-operator">
-        <viskoO:transformsToDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
-        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >vtkTIFFReader-operator</pmlp:hasName>
-        <viskoO:operatesOnDataType rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-plot.owl#3DGrid"/>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/TIFF.owl#TIFF"/>
-        <rdfs:label>vtkTIFFReader</rdfs:label>
-        <rdfs:comment>Convert TIFF images into vtkImageData</rdfs:comment>
-      </viskoO:Transformer>
-    </viskoS:implementsOperator>
-    <rdfs:label>vtkTIFFReader</rdfs:label>
-    <rdfs:comment>Convert TIFF images into vtkImageData</rdfs:comment>
-  </viskoS:Service>
-  <viskoS:InputParameterBindings rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0">
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-8">
-        <owlsProcess:valueData>0.0/9000.0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkContourFilter.owl#scalarRange</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-3">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dataSpacing</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-18">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#zRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-7">
-        <owlsProcess:valueData>35</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkContourFilter.owl#numContours</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-13">
-        <owlsProcess:valueData>400/300</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#size</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-17">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#yRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-9">
-        <owlsProcess:valueData>0.0/9000.0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#scalarRange</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-0">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#littleEndian</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-21">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#magnification</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-12">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#zRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-23">
-        <owlsProcess:valueData>0,0.0/40,1.0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#opacityFunction</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-20">
-        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#backgroundColor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-22">
-        <owlsProcess:valueData>20,1.0,0.0,0.3/80,1.0,0.0,0.3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#colorFunction</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-15">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#magnification</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-4">
-        <owlsProcess:valueData>0/229/0/24/0/67</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dataExtent</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-14">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#backgroundColor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-19">
-        <owlsProcess:valueData>400/300</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#size</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-2">
-        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dataOrigin</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-6">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#readLowerLeft</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-1">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dim</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-5">
-        <owlsProcess:valueData>1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#numScalarComponents</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:profiles rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#d7-0</viskoS:profiles>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-11">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#yRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-16">
-        <owlsProcess:valueData>105</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#xRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-0-binding-10">
-        <owlsProcess:valueData>105</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#xRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-  </viskoS:InputParameterBindings>
-  <viskoS:Service rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkImageDataReaderFloat">
-    <viskoS:supportedByOWLSService rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#vtkImageDataReaderFloatService"/>
-    <viskoS:supportedBy rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtk"/>
-    <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkImageDataReaderFloat-operator">
-        <viskoO:transformsToDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
-        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >vtkImageDataReaderFloat-operator</pmlp:hasName>
-        <viskoO:operatesOnDataType rdf:resource="http://www.ordnancesurvey.co.uk/ontology/Datatypes.owl#Volume"/>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYFLOATARRAYLENDIAN.owl#BINARYFLOATARRAYLENDIAN"/>
-        <rdfs:label>vtkImageDataReaderFloat</rdfs:label>
-        <rdfs:comment>Convert binary float arrays into vtkImageData</rdfs:comment>
-      </viskoO:Transformer>
-    </viskoS:implementsOperator>
-    <rdfs:label>vtkImageDataReaderFloat</rdfs:label>
-    <rdfs:comment>Convert binary float arrays into vtkImageData</rdfs:comment>
-  </viskoS:Service>
-  <viskoS:Service rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkPolyDataMapper">
-    <viskoS:supportedByOWLSService rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#vtkPolyDataMapperService"/>
-    <viskoS:supportedBy rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtk"/>
-    <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkPolyDataMapper-operator">
-        <viskoO:transformsToDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
-        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >vtkPolyDataMapper-operator</pmlp:hasName>
-        <viskoO:operatesOnDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKPOLYDATA.owl#VTKPOLYDATA"/>
-        <rdfs:label>vtkPolyDataMapper</rdfs:label>
-        <rdfs:comment>Converts poly data into JPEG</rdfs:comment>
-      </viskoO:Transformer>
-    </viskoS:implementsOperator>
-    <rdfs:label>vtkPolyDataMapper</rdfs:label>
-    <rdfs:comment>Converts poly data into JPEG</rdfs:comment>
-  </viskoS:Service>
-  <viskoS:InputParameterBindings rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3">
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-11">
-        <owlsProcess:valueData>0.0/30315.0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#scalarRange</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-19">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#yRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-25">
-        <owlsProcess:valueData>20,0.0/255,0.2</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#opacityFunction</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-7">
-        <owlsProcess:valueData>1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#numScalarComponents</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-1">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/float2ShortThr.owl#offset</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-27">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#dim</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-28">
-        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#dataOrigin</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-20">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#zRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-2">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#littleEndian</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-12">
-        <owlsProcess:valueData>105</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#xRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-9">
-        <owlsProcess:valueData>30</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkContourFilter.owl#numContours</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:profiles rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeWDO.owl#d4</viskoS:profiles>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-14">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#zRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-13">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#yRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-29">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#dataSpacing</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-15">
-        <owlsProcess:valueData>400/300</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#size</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-22">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#backgroundColor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-21">
-        <owlsProcess:valueData>400/300</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#size</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-3">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dim</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-4">
-        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dataOrigin</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-30">
-        <owlsProcess:valueData>0/230/0/25/0/68</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#dataExtent</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-16">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#backgroundColor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:profiles rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#d4-0</viskoS:profiles>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-31">
-        <owlsProcess:valueData>1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#numScalarComponents</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-23">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#magnification</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-5">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dataSpacing</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-17">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#magnification</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-24">
-        <owlsProcess:valueData>0.0,0.0,0.0,0.0/1000.0,1.0,0.0,0.0/3000.0,0.0,0.0,1.0/5000.0,0.0,1.0,0.0/7000.0,0.0,0.2,0.0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#colorFunction</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-6">
-        <owlsProcess:valueData>0/230/0/25/0/68</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dataExtent</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-26">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#littleEndian</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-0">
-        <owlsProcess:valueData>1000</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/float2ShortThr.owl#scalingFactor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-8">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#readLowerLeft</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-10">
-        <owlsProcess:valueData>0.0/30315.0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkContourFilter.owl#scalarRange</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-18">
-        <owlsProcess:valueData>105</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#xRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-3-binding-32">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#readLowerLeft</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-  </viskoS:InputParameterBindings>
-  <viskoS:Service rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkDataSetMapper">
-    <viskoS:supportedByOWLSService rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkDataSetMapper.owl#vtkDataSetMapperService"/>
-    <viskoS:supportedBy rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtk"/>
-    <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkDataSetMapper-operator">
-        <viskoO:transformsToDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
-        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >vtkDataSetMapper-operator</pmlp:hasName>
-        <viskoO:operatesOnDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
-        <rdfs:label>vtkDataSetMapper</rdfs:label>
-        <rdfs:comment>Convert vtkImageData into a raster image</rdfs:comment>
-      </viskoO:Transformer>
-    </viskoS:implementsOperator>
-    <rdfs:label>vtkDataSetMapper</rdfs:label>
-    <rdfs:comment>Convert vtkImageData into a raster image</rdfs:comment>
-  </viskoS:Service>
-  <viskoS:Service rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#float2ShortThr">
-    <viskoS:supportedByOWLSService rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/float2ShortThr.owl#float2ShortThrService"/>
-    <viskoS:supportedBy rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtk"/>
-    <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#float2ShortThr-operator">
-        <viskoO:transformsToDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYSHORTINTARRAYLENDIAN.owl#BINARYSHORTINTARRAYLENDIAN"/>
+      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#float2ShortThr-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >float2ShortThr-operator</pmlp:hasName>
-        <viskoO:operatesOnDataType rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-plot.owl#3DGrid"/>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYFLOATARRAYLENDIAN.owl#BINARYFLOATARRAYLENDIAN"/>
+        <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
         <rdfs:label>float2ShortThr</rdfs:label>
         <rdfs:comment>Converts float arrays to short ints</rdfs:comment>
-      </viskoO:Transformer>
+      </viskoO:Operator>
     </viskoS:implementsOperator>
     <rdfs:label>float2ShortThr</rdfs:label>
     <rdfs:comment>Converts float arrays to short ints</rdfs:comment>
   </viskoS:Service>
-  <viskoS:InputParameterBindings rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2">
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-33">
-        <owlsProcess:valueData>105</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkDataSetMapper.owl#xRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-25">
-        <owlsProcess:valueData>4000,0.2/8000,0.5</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#opacityFunction</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-7">
-        <owlsProcess:valueData>1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#numScalarComponents</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-0">
-        <owlsProcess:valueData>1000</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/float2ShortThr.owl#scalingFactor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-22">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#backgroundColor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-18">
-        <owlsProcess:valueData>105</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#xRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-35">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkDataSetMapper.owl#zRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-15">
-        <owlsProcess:valueData>400/300</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#size</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-32">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#readLowerLeft</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:profiles rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#d14-0</viskoS:profiles>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-28">
-        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#dataOrigin</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-6">
-        <owlsProcess:valueData>0/230/0/25/0/68</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dataExtent</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-38">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkDataSetMapper.owl#magnification</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-3">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dim</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-11">
-        <owlsProcess:valueData>0.0/9000.0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#scalarRange</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-9">
-        <owlsProcess:valueData>35</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkContourFilter.owl#numContours</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-24">
-        <owlsProcess:valueData>3000,1,1,0/5000,0.5,0.95,0/5600,0,0,1/6500,0.28,0.2,0.5/7000,1,0,0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#colorFunction</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-21">
-        <owlsProcess:valueData>400/300</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#size</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-37">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkDataSetMapper.owl#backgroundColor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-17">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#magnification</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-10">
-        <owlsProcess:valueData>0.0/9000.0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkContourFilter.owl#scalarRange</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-34">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkDataSetMapper.owl#yRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-14">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#zRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-31">
-        <owlsProcess:valueData>1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#numScalarComponents</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-19">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#yRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-27">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#dim</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-5">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dataSpacing</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:profiles rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#d2-1</viskoS:profiles>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-2">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#littleEndian</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-13">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#yRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-8">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#readLowerLeft</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-23">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#magnification</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-1">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/float2ShortThr.owl#offset</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-20">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#zRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-36">
-        <owlsProcess:valueData>400/300</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkDataSetMapper.owl#size</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-16">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#backgroundColor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-29">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#dataSpacing</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-30">
-        <owlsProcess:valueData>0/230/0/25/0/68</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#dataExtent</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-26">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#littleEndian</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-4">
-        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dataOrigin</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:profiles rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeWDO.owl#d2</viskoS:profiles>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-2-binding-12">
-        <owlsProcess:valueData>105</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#xRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-  </viskoS:InputParameterBindings>
-  <viskoS:Service rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkImageDataReader">
-    <viskoS:supportedByOWLSService rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#vtkImageDataReaderService"/>
-    <viskoS:supportedBy rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtk"/>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkSurfaceReconstructionFilter">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkSurfaceReconstructionFilter.owl#vtkSurfaceReconstructionFilterService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkImageDataReader-operator">
-        <viskoO:transformsToDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATASHORTINTS.owl#VTKIMAGEDATASHORTINTS"/>
+      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkSurfaceReconstructionFilter-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >vtkImageDataReader-operator</pmlp:hasName>
-        <viskoO:operatesOnDataType rdf:resource="http://www.ordnancesurvey.co.uk/ontology/Datatypes.owl#Volume"/>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYSHORTINTARRAYLENDIAN.owl#BINARYSHORTINTARRAYLENDIAN"/>
-        <rdfs:label>vtkImageDataReader</rdfs:label>
-        <rdfs:comment>Converts binary short integer arrays into vtk image data of short integers</rdfs:comment>
-      </viskoO:Transformer>
+        >vtkSurfaceReconstructionFilter-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3D"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkPolyData"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <rdfs:label>vtkSurfaceReconstructionFilter</rdfs:label>
+        <rdfs:comment>Generates a vktImageData surface that wraps unstructured vtkPolyData points</rdfs:comment>
+      </viskoO:Operator>
     </viskoS:implementsOperator>
-    <rdfs:label>vtkImageDataReader</rdfs:label>
-    <rdfs:comment>Converts binary short integer arrays into vtk image data of short integers</rdfs:comment>
+    <rdfs:label>vtkSurfaceReconstructionFilter</rdfs:label>
+    <rdfs:comment>Generates a vktImageData surface that wraps unstructured vtkPolyData points</rdfs:comment>
   </viskoS:Service>
-  <viskoS:Service rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#int2Short">
-    <viskoS:supportedByOWLSService rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/int2Short.owl#int2ShortService"/>
-    <viskoS:supportedBy rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtk"/>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkDataObjectToDataSetFilter3DGravityData">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataObjectToDataSetFilter3DGravityData.owl#vtkDataObjectToDataSetFilter3DGravityDataService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#int2Short-operator">
-        <viskoO:transformsToDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYSHORTINTARRAYLENDIAN.owl#BINARYSHORTINTARRAYLENDIAN"/>
+      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkDataObjectToDataSetFilter3DGravityData-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >int2Short-operator</pmlp:hasName>
-        <viskoO:operatesOnDataType rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-plot.owl#Raster_Cube"/>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYINTARRAYLENDIAN.owl#BINARYINTARRAYLENDIAN"/>
-        <rdfs:label>int2Short</rdfs:label>
-        <rdfs:comment>Converts integer arrays to short integers</rdfs:comment>
-      </viskoO:Transformer>
+        >vtkDataObjectToDataSetFilter3DGravityData-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkPolyData"/>
+        <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#d19"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/SPACESEPARATEDVALUES.owl#SPACESEPARATEDVALUES"/>
+        <rdfs:label>vtkDataObjectToDataSetFilter3DGravityData</rdfs:label>
+        <rdfs:comment>Convert PACES gravity dataset into vtkPolyData of 3D Points</rdfs:comment>
+      </viskoO:Operator>
     </viskoS:implementsOperator>
-    <rdfs:label>int2Short</rdfs:label>
-    <rdfs:comment>Converts integer arrays to short integers</rdfs:comment>
+    <rdfs:label>vtkDataObjectToDataSetFilter3DGravityData</rdfs:label>
+    <rdfs:comment>Convert PACES gravity dataset into vtkPolyData of 3D Points</rdfs:comment>
   </viskoS:Service>
-  <viskoS:Service rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkImageDataReaderUnsignedInts">
-    <viskoS:supportedByOWLSService rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderUnsignedInts.owl#vtkImageDataReaderUnsignedIntsService"/>
-    <viskoS:supportedBy rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtk"/>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReader3DIntegers">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DIntegers.owl#vtkImageDataReader3DIntegersService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkImageDataReaderUnsignedInts-operator">
-        <viskoO:transformsToDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
+      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReader3DIntegers-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >vtkImageDataReaderUnsignedInts-operator</pmlp:hasName>
-        <viskoO:operatesOnDataType rdf:resource="http://www.ordnancesurvey.co.uk/ontology/Datatypes.owl#Volume"/>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/BINARYUNSIGNEDINTARRAYLENDIAN.owl#BINARYUNSIGNEDINTARRAYLENDIAN"/>
-        <rdfs:label>vtkImageDataReaderUnsignedInts</rdfs:label>
-        <rdfs:comment>Convert binary unsigned interger array into vtkImageData</rdfs:comment>
-      </viskoO:Transformer>
+        >vtkImageDataReader3DIntegers-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3DShortIntegers"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
+        <rdfs:label>vtkImageDataReader3DIntegers</rdfs:label>
+        <rdfs:comment>Convert arrays of integer values into vtkImageData of integer values</rdfs:comment>
+      </viskoO:Operator>
     </viskoS:implementsOperator>
-    <rdfs:label>vtkImageDataReaderUnsignedInts</rdfs:label>
-    <rdfs:comment>Convert binary unsigned interger array into vtkImageData</rdfs:comment>
+    <rdfs:label>vtkImageDataReader3DIntegers</rdfs:label>
+    <rdfs:comment>Convert arrays of integer values into vtkImageData of integer values</rdfs:comment>
   </viskoS:Service>
-  <viskoS:InputParameterBindings rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1">
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-20">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#zRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-26">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#littleEndian</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-1">
-        <owlsProcess:valueData>10000</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/float2ShortThr.owl#offset</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-29">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#dataSpacing</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-7">
-        <owlsProcess:valueData>1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#numScalarComponents</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-10">
-        <owlsProcess:valueData>9997.0/10014.0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkContourFilter.owl#scalarRange</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-13">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#yRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-32">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#readLowerLeft</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-19">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#yRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-16">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#backgroundColor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-22">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#backgroundColor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-25">
-        <owlsProcess:valueData>20,0.0/255,0.2</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#opacityFunction</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-3">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dim</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-0">
-        <owlsProcess:valueData>1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/float2ShortThr.owl#scalingFactor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-28">
-        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#dataOrigin</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-6">
-        <owlsProcess:valueData>0/229/0/24/0/67</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dataExtent</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-9">
-        <owlsProcess:valueData>35</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkContourFilter.owl#numContours</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-12">
-        <owlsProcess:valueData>90</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#xRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-31">
-        <owlsProcess:valueData>1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#numScalarComponents</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-15">
-        <owlsProcess:valueData>400/300</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#size</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-18">
-        <owlsProcess:valueData>105</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#xRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-24">
-        <owlsProcess:valueData>0.0,0.0,0.0,0.0/1000.0,1.0,0.0,0.0/3000.0,0.0,0.0,1.0/5000.0,0.0,1.0,0.0/7000.0,0.0,0.2,0.0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#colorFunction</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-2">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#littleEndian</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-5">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dataSpacing</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-21">
-        <owlsProcess:valueData>400/300</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#size</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-27">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#dim</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-8">
-        <owlsProcess:valueData>true</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#readLowerLeft</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-11">
-        <owlsProcess:valueData>9997.0/10014.0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#scalarRange</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-30">
-        <owlsProcess:valueData>0/230/0/25/0/68</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReaderFloat.owl#dataExtent</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:profiles rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#d8-0</viskoS:profiles>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-14">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#zRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-17">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkPolyDataMapper.owl#magnification</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:profiles rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeWDO.owl#d8</viskoS:profiles>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-23">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#magnification</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#bindings-1-binding-4">
-        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
-        <owlsProcess:toParam>http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkImageDataReader.owl#dataOrigin</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-  </viskoS:InputParameterBindings>
-  <viskoS:Service rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkContourFilter">
-    <viskoS:supportedByOWLSService rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkContourFilter.owl#vtkContourFilterService"/>
-    <viskoS:supportedBy rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtk"/>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkExtractVOI2D">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkExtractVOI2D.owl#vtkExtractVOI2DService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkContourFilter-operator">
-        <viskoO:transformsToDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKPOLYDATA.owl#VTKPOLYDATA"/>
+      <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkExtractVOI2D-operator">
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#ContourMap"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >vtkContourFilter-operator</pmlp:hasName>
-        <viskoO:operatesOnDataType rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-plot.owl#ISO_Surfaces"/>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATA.owl#VTKIMAGEDATA"/>
-        <rdfs:label>vtkContourFilter</rdfs:label>
-        <rdfs:comment>Generates isosurfaces from vtkImageData</rdfs:comment>
-      </viskoO:Transformer>
+        >vtkExtractVOI2D-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData2D"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3D"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <rdfs:label>vtkExtractVOI2D</rdfs:label>
+        <rdfs:comment>Extracts a subset plane</rdfs:comment>
+      </viskoO:ViewMapper>
     </viskoS:implementsOperator>
-    <rdfs:label>vtkContourFilter</rdfs:label>
-    <rdfs:comment>Generates isosurfaces from vtkImageData</rdfs:comment>
+    <rdfs:label>vtkExtractVOI2D</rdfs:label>
+    <rdfs:comment>Extracts a subset plane</rdfs:comment>
   </viskoS:Service>
-  <viskoS:Service rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkVolume">
-    <viskoS:supportedByOWLSService rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkVolume.owl#vtkVolumeService"/>
-    <viskoS:supportedBy rdf:resource="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtk"/>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkExtractVOI3D">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkExtractVOI3D.owl#vtkExtractVOI3DService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_vtk.owl#vtkVolume-operator">
-        <viskoO:transformsToDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:transformsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
+      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkExtractVOI3D-operator">
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >vtkExtractVOI3D-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3D"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3D"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <rdfs:label>vtkExtractVOI3D</rdfs:label>
+        <rdfs:comment>Extracts a subset volume</rdfs:comment>
+      </viskoO:Operator>
+    </viskoS:implementsOperator>
+    <rdfs:label>vtkExtractVOI3D</rdfs:label>
+    <rdfs:comment>Extracts a subset volume</rdfs:comment>
+  </viskoS:Service>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkVolume">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#vtkVolumeService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
+    <viskoS:implementsOperator>
+      <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkVolume-operator">
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#VolumeRendering"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkVolume-operator</pmlp:hasName>
-        <viskoO:operatesOnDataType rdf:resource="http://www.ordnancesurvey.co.uk/ontology/Datatypes.owl#Volume"/>
-        <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VTKIMAGEDATASHORTINTS.owl#VTKIMAGEDATASHORTINTS"/>
+        <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3DUnsignedShortIntegers"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
         <rdfs:label>vtkVolume</rdfs:label>
         <rdfs:comment>Convert vtkImageData of short integers into a volume JPEG</rdfs:comment>
-      </viskoO:Transformer>
+      </viskoO:ViewMapper>
     </viskoS:implementsOperator>
     <rdfs:label>vtkVolume</rdfs:label>
     <rdfs:comment>Convert vtkImageData of short integers into a volume JPEG</rdfs:comment>
+  </viskoS:Service>
+  <viskoS:InputParameterBindings rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0">
+    <viskoS:profiles rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#d7-0"/>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-29">
+        <owlsProcess:valueData>105</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-10">
+        <owlsProcess:valueData>1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#numScalarComponents</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-4">
+        <owlsProcess:valueData>1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DIntegers.owl#numScalarComponents</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-23">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-30">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-22">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-28">
+        <owlsProcess:valueData>0,0.0/40,1.0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#opacityFunction</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-18">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-7">
+        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#dataOrigin</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-21">
+        <owlsProcess:valueData>105</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-12">
+        <owlsProcess:valueData>35</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#numContours</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-13">
+        <owlsProcess:valueData>0.0/9000.0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#scalarRange</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-19">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-33">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-6">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#littleEndian</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-25">
+        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-32">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-15">
+        <owlsProcess:valueData>105</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-9">
+        <owlsProcess:valueData>0/229/0/24/0/67</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#dataExtent</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-24">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-31">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-14">
+        <owlsProcess:valueData>0.0/9000.0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#scalarRange</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-3">
+        <owlsProcess:valueData>0/229/0/24/0/67</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DIntegers.owl#dataExtent</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-2">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DIntegers.owl#dataSpacing</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-8">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#dataSpacing</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-27">
+        <owlsProcess:valueData>20,1.0,0.0,0.3/80,1.0,0.0,0.3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#colorFunction</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-34">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-1">
+        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DIntegers.owl#dataOrigin</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-16">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-0">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DIntegers.owl#littleEndian</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-17">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-20">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-26">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-11">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#readLowerLeft</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-0-binding-5">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DIntegers.owl#readLowerLeft</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+  </viskoS:InputParameterBindings>
+  <viskoS:InputParameterBindings rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1">
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-7">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#readLowerLeft</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-4">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#dataSpacing</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-33">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-30">
+        <owlsProcess:valueData>20,0.0/255,0.2</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#opacityFunction</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-26">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-23">
+        <owlsProcess:valueData>105</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-9">
+        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#dataOrigin</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-36">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-28">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-3">
+        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#dataOrigin</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-0">
+        <owlsProcess:valueData>1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/float2ShortThr.owl#scalingFactor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-17">
+        <owlsProcess:valueData>90</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-12">
+        <owlsProcess:valueData>1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#numScalarComponents</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-6">
+        <owlsProcess:valueData>1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#numScalarComponents</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-32">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-25">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-8">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#littleEndian</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-22">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:profiles rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeWDO.owl#d8"/>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-35">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-27">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-2">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#littleEndian</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-14">
+        <owlsProcess:valueData>35</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#numContours</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:profiles rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#d8-0"/>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-11">
+        <owlsProcess:valueData>0/229/0/24/0/67</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#dataExtent</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-21">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-16">
+        <owlsProcess:valueData>9997.0/10014.0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#scalarRange</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-34">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-5">
+        <owlsProcess:valueData>0/229/0/24/0/67</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#dataExtent</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-31">
+        <owlsProcess:valueData>105</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-19">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-29">
+        <owlsProcess:valueData>0.0,0.0,0.0,0.0/1000.0,1.0,0.0,0.0/3000.0,0.0,0.0,1.0/5000.0,0.0,1.0,0.0/7000.0,0.0,0.2,0.0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#colorFunction</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-24">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-13">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#readLowerLeft</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-10">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#dataSpacing</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-1">
+        <owlsProcess:valueData>10000</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/float2ShortThr.owl#offset</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-20">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-18">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-1-binding-15">
+        <owlsProcess:valueData>9997.0/10014.0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#scalarRange</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+  </viskoS:InputParameterBindings>
+  <viskoS:InputParameterBindings rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2">
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-19">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-0">
+        <owlsProcess:valueData>1000</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/float2ShortThr.owl#scalingFactor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-31">
+        <owlsProcess:valueData>105</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-23">
+        <owlsProcess:valueData>105</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-25">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-11">
+        <owlsProcess:valueData>0/230/0/25/0/68</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#dataExtent</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-13">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#readLowerLeft</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-3">
+        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#dataOrigin</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-35">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-5">
+        <owlsProcess:valueData>0/230/0/25/0/68</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#dataExtent</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-9">
+        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#dataOrigin</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-28">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-16">
+        <owlsProcess:valueData>0.0/9000.0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#scalarRange</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-33">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:profiles rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#d2-1"/>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-30">
+        <owlsProcess:valueData>4000,0.2/8000,0.5</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#opacityFunction</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-22">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-21">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-10">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#dataSpacing</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-8">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#littleEndian</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-24">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-7">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#readLowerLeft</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-2">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#littleEndian</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:profiles rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeWDO.owl#d2"/>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-27">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-18">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-15">
+        <owlsProcess:valueData>0.0/9000.0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#scalarRange</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-32">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:profiles rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#d14-0"/>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-20">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-12">
+        <owlsProcess:valueData>1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#numScalarComponents</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-34">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-26">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-14">
+        <owlsProcess:valueData>35</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#numContours</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-4">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#dataSpacing</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-1">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/float2ShortThr.owl#offset</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-29">
+        <owlsProcess:valueData>3000,1,1,0/5000,0.5,0.95,0/5600,0,0,1/6500,0.28,0.2,0.5/7000,1,0,0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#colorFunction</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-36">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-17">
+        <owlsProcess:valueData>105</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-2-binding-6">
+        <owlsProcess:valueData>1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#numScalarComponents</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+  </viskoS:InputParameterBindings>
+  <viskoS:InputParameterBindings rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4">
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-6">
+        <owlsProcess:valueData>-260/-170</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#scalarRange</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-9">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-10">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-0">
+        <owlsProcess:valueData>30/30/30</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkShepardMethod.owl#sampleDimensions</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-3">
+        <owlsProcess:valueData>-260/-170</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter2D.owl#scalarRange</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-15">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-1">
+        <owlsProcess:valueData>0/30/0/30/10</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkExtractVOI2D.owl#dataExtent</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-7">
+        <owlsProcess:valueData>-70</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:profiles rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#d19"/>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-13">
+        <owlsProcess:valueData>-70</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-18">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-11">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-4">
+        <owlsProcess:valueData>20</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#numContours</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-14">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-16">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-12">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-8">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-2">
+        <owlsProcess:valueData>20</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter2D.owl#numContours</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-5">
+        <owlsProcess:valueData>-260/-170</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#scalarRange</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-17">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+  </viskoS:InputParameterBindings>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkPolyDataMapper">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#vtkPolyDataMapperService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
+    <viskoS:implementsOperator>
+      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkPolyDataMapper-operator">
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >vtkPolyDataMapper-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkPolyData"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <rdfs:label>vtkPolyDataMapper</rdfs:label>
+        <rdfs:comment>Converts vtkPolyData into JPEG images</rdfs:comment>
+      </viskoO:Operator>
+    </viskoS:implementsOperator>
+    <rdfs:label>vtkPolyDataMapper</rdfs:label>
+    <rdfs:comment>Converts vtkPolyData into JPEG images</rdfs:comment>
+  </viskoS:Service>
+  <viskoS:InputParameterBindings rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3">
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-15">
+        <owlsProcess:valueData>0.0/30315.0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#scalarRange</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-24">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-28">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-18">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-8">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#littleEndian</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-21">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-2">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#littleEndian</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-5">
+        <owlsProcess:valueData>0/230/0/25/0/68</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#dataExtent</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-34">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-25">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-31">
+        <owlsProcess:valueData>105</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-10">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#dataSpacing</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-23">
+        <owlsProcess:valueData>105</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-13">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#readLowerLeft</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-7">
+        <owlsProcess:valueData>true</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#readLowerLeft</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:profiles rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#d4-0"/>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-27">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-17">
+        <owlsProcess:valueData>105</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-20">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-14">
+        <owlsProcess:valueData>30</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#numContours</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-4">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#dataSpacing</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-1">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/float2ShortThr.owl#offset</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-30">
+        <owlsProcess:valueData>20,0.0/255,0.2</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#opacityFunction</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-33">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-19">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-22">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-12">
+        <owlsProcess:valueData>1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#numScalarComponents</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-16">
+        <owlsProcess:valueData>0.0/30315.0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#scalarRange</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-6">
+        <owlsProcess:valueData>1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#numScalarComponents</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:profiles rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeWDO.owl#d4"/>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-9">
+        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#dataOrigin</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-3">
+        <owlsProcess:valueData>0/0/0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#dataOrigin</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-29">
+        <owlsProcess:valueData>0.0,0.0,0.0,0.0/1000.0,1.0,0.0,0.0/3000.0,0.0,0.0,1.0/5000.0,0.0,1.0,0.0/7000.0,0.0,0.2,0.0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#colorFunction</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-35">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-26">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-0">
+        <owlsProcess:valueData>1000</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/float2ShortThr.owl#scalingFactor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-11">
+        <owlsProcess:valueData>0/230/0/25/0/68</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#dataExtent</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-32">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-3-binding-36">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+  </viskoS:InputParameterBindings>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkDataSetMapper3D">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#vtkDataSetMapperService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
+    <viskoS:implementsOperator>
+      <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkDataSetMapper3D-operator">
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#RasterCube"/>
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >vtkDataSetMapper3D-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3D"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <rdfs:label>vtkDataSetMapper3D</rdfs:label>
+        <rdfs:comment>Convert 3D vtkImageData into a raster cube</rdfs:comment>
+      </viskoO:ViewMapper>
+    </viskoS:implementsOperator>
+    <rdfs:label>vtkDataSetMapper3D</rdfs:label>
+    <rdfs:comment>Convert 3D vtkImageData into a raster cube</rdfs:comment>
+  </viskoS:Service>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkContourFilter2D">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter2D.owl#vtkContourFilterService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
+    <viskoS:implementsOperator>
+      <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkContourFilter2D-operator">
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#ContourMap"/>
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >vtkContourFilter2D-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkPolyData"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData2D"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <rdfs:label>vtkContourFilter2D</rdfs:label>
+        <rdfs:comment>Generates contour map from 2D vtkImageData</rdfs:comment>
+      </viskoO:ViewMapper>
+    </viskoS:implementsOperator>
+    <rdfs:label>vtkContourFilter2D</rdfs:label>
+    <rdfs:comment>Generates contour map from 2D vtkImageData</rdfs:comment>
+  </viskoS:Service>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReader3DFloats">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DFloats.owl#vtkImageDataReader3DFloatsService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
+    <viskoS:implementsOperator>
+      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReader3DFloats-operator">
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >vtkImageDataReader3DFloats-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3DFloats"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
+        <rdfs:label>vtkImageDataReader3DFloats</rdfs:label>
+        <rdfs:comment>Converts 1D array of float values into 3D vtkImageData of float values</rdfs:comment>
+      </viskoO:Operator>
+    </viskoS:implementsOperator>
+    <rdfs:label>vtkImageDataReader3DFloats</rdfs:label>
+    <rdfs:comment>Converts 1D array of float values into 3D vtkImageData of float values</rdfs:comment>
+  </viskoS:Service>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkDataSetMapper2D">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper2D.owl#vtkDataSetMapperService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
+    <viskoS:implementsOperator>
+      <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkDataSetMapper2D-operator">
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#RasterMap"/>
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >vtkDataSetMapper2D-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData2D"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <rdfs:label>vtkDataSetMapper2D</rdfs:label>
+        <rdfs:comment>Convert 2D vtkImageData into a raster map</rdfs:comment>
+      </viskoO:ViewMapper>
+    </viskoS:implementsOperator>
+    <rdfs:label>vtkDataSetMapper2D</rdfs:label>
+    <rdfs:comment>Convert 2D vtkImageData into a raster map</rdfs:comment>
+  </viskoS:Service>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReader3DUnsignedShortIntegers">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#vtkImageDataReader3DUnsignedShortIntegersService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
+    <viskoS:implementsOperator>
+      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReader3DUnsignedShortIntegers-operator">
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >vtkImageDataReader3DUnsignedShortIntegers-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3DUnsignedShortIntegers"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
+        <rdfs:label>vtkImageDataReader3DUnsignedShortIntegers</rdfs:label>
+        <rdfs:comment>Convert array of unsigned short integers into vtkImageData of unsigned short integers values</rdfs:comment>
+      </viskoO:Operator>
+    </viskoS:implementsOperator>
+    <rdfs:label>vtkImageDataReader3DUnsignedShortIntegers</rdfs:label>
+    <rdfs:comment>Convert array of unsigned short integers into vtkImageData of unsigned short integers values</rdfs:comment>
+  </viskoS:Service>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#int2Short">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/int2Short.owl#int2ShortService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
+    <viskoS:implementsOperator>
+      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#int2Short-operator">
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >int2Short-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
+        <rdfs:label>int2Short</rdfs:label>
+        <rdfs:comment>Converts integer arrays to unsigned short integers</rdfs:comment>
+      </viskoO:Operator>
+    </viskoS:implementsOperator>
+    <rdfs:label>int2Short</rdfs:label>
+    <rdfs:comment>Converts integer arrays to unsigned short integers</rdfs:comment>
+  </viskoS:Service>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkContourFilter3D">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#vtkContourFilterService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
+    <viskoS:implementsOperator>
+      <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkContourFilter3D-operator">
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#IsoSurfacesRendering"/>
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >vtkContourFilter3D-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkPolyData"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3D"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <rdfs:label>vtkContourFilter3D</rdfs:label>
+        <rdfs:comment>Generates isosurfaces from 3D vtkImageData</rdfs:comment>
+      </viskoO:ViewMapper>
+    </viskoS:implementsOperator>
+    <rdfs:label>vtkContourFilter3D</rdfs:label>
+    <rdfs:comment>Generates isosurfaces from 3D vtkImageData</rdfs:comment>
+  </viskoS:Service>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkShepardMethod">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkShepardMethod.owl#vtkShepardMethodService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
+    <viskoS:implementsOperator>
+      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkShepardMethod-operator">
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >vtkShepardMethod-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3D"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkPolyData"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <rdfs:label>vtkShepardMethod</rdfs:label>
+        <rdfs:comment>3D interpolation routine that generates vtkImageData from unstructured points</rdfs:comment>
+      </viskoO:Operator>
+    </viskoS:implementsOperator>
+    <rdfs:label>vtkShepardMethod</rdfs:label>
+    <rdfs:comment>3D interpolation routine that generates vtkImageData from unstructured points</rdfs:comment>
   </viskoS:Service>
 </rdf:RDF>

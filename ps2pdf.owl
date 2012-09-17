@@ -1,24 +1,18 @@
 <?xml version="1.0"?>
 <rdf:RDF
-    xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
-    xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
-    xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
-    xmlns:viskoS="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-service.owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/ps2pdf.owl"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
     xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/ps2pdf.owl"
-  xml:base="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/ps2pdf.owl">
-  <owl:Ontology rdf:about="">
-    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Grounding.owl"/>
-    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Profile.owl"/>
-    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Service.owl"/>
-  </owl:Ontology>
+  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/ps2pdf.owl">
   <service:Service rdf:ID="ps2pdfService">
     <rdfs:label>PS to PDF</rdfs:label>
     <service:supports>

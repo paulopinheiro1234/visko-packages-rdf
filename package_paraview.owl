@@ -1,25 +1,23 @@
 <rdf:RDF
+    xmlns:viskoV="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owlsService="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+    xmlns:owlsProcess="http://www.daml.org/services/owl-s/1.2/Process.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:viskoS="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-service.owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:viskoO="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-operator.owl#"
     xmlns:pmlp="http://inference-web.org/2.0/pml-provenance.owl#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-  <owl:Ontology>
-    <owl:imports rdf:resource="http://inference-web.org/2.0/pml-provenance.owl"/>
-    <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-operator.owl"/>
-  </owl:Ontology>
-  <viskoO:Viewer rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_paraview.owl#xdmf-viewer">
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:viskoO="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-operator.owl#">
+  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_paraview.owl#xdmf-viewer">
     <viskoO:partOfViewerSet>
-      <viskoO:ViewerSet rdf:about="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/package_paraview.owl#paraview">
+      <viskoO:ViewerSet rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_paraview.owl#paraview">
         <rdfs:label>Kitware Paraview</rdfs:label>
         <rdfs:comment>Kitware Paraview</rdfs:comment>
       </viskoO:ViewerSet>
     </viskoO:partOfViewerSet>
-    <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >xdmf-viewer</pmlp:hasName>
-    <viskoO:operatesOnDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <viskoO:operatesOn rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XDMF.owl#XDMF"/>
+    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XDMF.owl#XDMF"/>
+    <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdfs:label>XDMF Viewer</rdfs:label>
     <rdfs:comment>XDMF Viewer of the ParaView Distribution</rdfs:comment>
   </viskoO:Viewer>

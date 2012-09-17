@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/grdimage.owl"
     xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DIntegers.owl"
     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
     xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -12,53 +12,54 @@
     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
     xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/grdimage.owl">
-  <service:Service rdf:ID="grdimageService">
-    <rdfs:label>GMT grdimage</rdfs:label>
+  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DIntegers.owl">
+  <service:Service rdf:ID="vtkImageDataReader3DIntegersService">
+    <rdfs:label>vtkImageDataReader3DIntegers</rdfs:label>
     <service:supports>
-      <grounding:WsdlGrounding rdf:ID="grdimageGrounding"/>
+      <grounding:WsdlGrounding rdf:ID="vtkImageDataReader3DIntegersGrounding"/>
     </service:supports>
     <service:describedBy>
-      <process:AtomicProcess rdf:ID="grdimageProcess"/>
+      <process:AtomicProcess rdf:ID="vtkImageDataReader3DIntegersProcess"/>
     </service:describedBy>
     <service:presents>
-      <profile:Profile rdf:ID="grdimageProfile"/>
+      <profile:Profile rdf:ID="vtkImageDataReader3DIntegersProfile"/>
     </service:presents>
   </service:Service>
-  <profile:Profile rdf:about="#grdimageProfile">
+  <profile:Profile rdf:about="#vtkImageDataReader3DIntegersProfile">
     <profile:hasInput>
-      <process:Input rdf:ID="R">
+      <process:Input rdf:ID="dataExtent">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>R</rdfs:label>
+        <rdfs:label>dataExtent</rdfs:label>
       </process:Input>
     </profile:hasInput>
     <profile:hasInput>
-      <process:Input rdf:ID="C">
+      <process:Input rdf:ID="numScalarComponents">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>C</rdfs:label>
+        <rdfs:label>numScalarComponents</rdfs:label>
       </process:Input>
     </profile:hasInput>
     <profile:hasInput>
-      <process:Input rdf:ID="J">
+      <process:Input rdf:ID="dataOrigin">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>J</rdfs:label>
+        <rdfs:label>dataOrigin</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
+    <profile:serviceName>vtkImageDataReader3DIntegers</profile:serviceName>
+    <profile:hasInput>
+      <process:Input rdf:ID="readLowerLeft">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>readLowerLeft</rdfs:label>
       </process:Input>
     </profile:hasInput>
     <profile:hasInput>
-      <process:Input rdf:ID="T">
+      <process:Input rdf:ID="littleEndian">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>T</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <profile:hasInput>
-      <process:Input rdf:ID="B">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>B</rdfs:label>
+        <rdfs:label>littleEndian</rdfs:label>
       </process:Input>
     </profile:hasInput>
     <profile:hasOutput>
@@ -75,41 +76,63 @@
         <rdfs:label>url</rdfs:label>
       </process:Input>
     </profile:hasInput>
-    <service:presentedBy rdf:resource="#grdimageService"/>
-    <profile:serviceName>grdimage</profile:serviceName>
+    <service:presentedBy rdf:resource="#vtkImageDataReader3DIntegersService"/>
+    <profile:hasInput>
+      <process:Input rdf:ID="dataSpacing">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>dataSpacing</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
     <profile:textDescription>This is a VisKo/OWLS Service.</profile:textDescription>
   </profile:Profile>
-  <process:AtomicProcess rdf:about="#grdimageProcess">
-    <service:describes rdf:resource="#grdimageService"/>
-    <process:hasInput rdf:resource="#J"/>
-    <process:hasInput rdf:resource="#T"/>
-    <rdfs:label>grdimageProcess</rdfs:label>
-    <process:hasInput rdf:resource="#C"/>
-    <process:hasInput rdf:resource="#B"/>
+  <process:AtomicProcess rdf:about="#vtkImageDataReader3DIntegersProcess">
+    <process:hasInput rdf:resource="#dataExtent"/>
+    <process:hasInput rdf:resource="#numScalarComponents"/>
     <process:hasOutput rdf:resource="#return"/>
+    <service:describes rdf:resource="#vtkImageDataReader3DIntegersService"/>
+    <process:hasInput rdf:resource="#dataOrigin"/>
+    <rdfs:label>vtkImageDataReader3DIntegersProcess</rdfs:label>
+    <process:hasInput rdf:resource="#dataSpacing"/>
+    <process:hasInput rdf:resource="#littleEndian"/>
+    <process:hasInput rdf:resource="#readLowerLeft"/>
     <process:hasInput rdf:resource="#url"/>
-    <process:hasInput rdf:resource="#R"/>
   </process:AtomicProcess>
-  <grounding:WsdlGrounding rdf:about="#grdimageGrounding">
+  <grounding:WsdlGrounding rdf:about="#vtkImageDataReader3DIntegersGrounding">
     <grounding:hasAtomicProcessGrounding>
-      <grounding:WsdlAtomicProcessGrounding rdf:ID="grdimageAtomicProcessGrounding"/>
+      <grounding:WsdlAtomicProcessGrounding rdf:ID="vtkImageDataReader3DIntegersAtomicProcessGrounding"/>
     </grounding:hasAtomicProcessGrounding>
-    <service:supportedBy rdf:resource="#grdimageService"/>
+    <service:supportedBy rdf:resource="#vtkImageDataReader3DIntegersService"/>
   </grounding:WsdlGrounding>
-  <grounding:WsdlAtomicProcessGrounding rdf:about="#grdimageAtomicProcessGrounding">
+  <grounding:WsdlAtomicProcessGrounding rdf:about="#vtkImageDataReader3DIntegersAtomicProcessGrounding">
+    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://services.trustlab.utep.edu#vtkImageDataReader3DIntegersRequest</grounding:wsdlInputMessage>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#B</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#B"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#littleEndian</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#littleEndian"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://services.trustlab.utep.edu#vtkImageDataReader3DIntegersResponse</grounding:wsdlOutputMessage>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#dataExtent</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#dataExtent"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#J</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#J"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#readLowerLeft</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#readLowerLeft"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
-    <grounding:owlsProcess rdf:resource="#grdimageProcess"/>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#dataSpacing</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#dataSpacing"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
     <grounding:wsdlOutput>
       <grounding:WsdlOutputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
@@ -118,20 +141,13 @@
     </grounding:wsdlOutput>
     <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
     >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
-    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#grdimageRequest</grounding:wsdlInputMessage>
     <grounding:wsdlOperation>
       <grounding:WsdlOperationRef>
         <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#grdimage</grounding:operation>
+        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#vtkImageDataReader3DIntegers</grounding:operation>
       </grounding:WsdlOperationRef>
     </grounding:wsdlOperation>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#C</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#C"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
+    <grounding:owlsProcess rdf:resource="#vtkImageDataReader3DIntegersProcess"/>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#url</grounding:wsdlMessagePart>
@@ -140,17 +156,15 @@
     </grounding:wsdlInput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#R</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#R"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#dataOrigin</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#dataOrigin"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#T</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#T"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#numScalarComponents</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#numScalarComponents"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
-    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#grdimageResponse</grounding:wsdlOutputMessage>
   </grounding:WsdlAtomicProcessGrounding>
 </rdf:RDF>

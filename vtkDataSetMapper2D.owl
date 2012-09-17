@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <rdf:RDF
-    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
@@ -8,24 +7,49 @@
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper2D.owl"
     xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
     xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl">
-  <service:Service rdf:ID="vtkPolyDataMapperService">
-    <rdfs:label>vtkPolyDataMapper</rdfs:label>
+  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper2D.owl">
+  <service:Service rdf:ID="vtkDataSetMapperService">
+    <rdfs:label>vtkDataSetMapper2D</rdfs:label>
     <service:supports>
-      <grounding:WsdlGrounding rdf:ID="vtkPolyDataMapperGrounding"/>
+      <grounding:WsdlGrounding rdf:ID="vtkDataSetMapperGrounding"/>
     </service:supports>
     <service:describedBy>
-      <process:AtomicProcess rdf:ID="vtkPolyDataMapperProcess"/>
+      <process:AtomicProcess rdf:ID="vtkDataSetMapperProcess"/>
     </service:describedBy>
     <service:presents>
-      <profile:Profile rdf:ID="vtkPolyDataMapperProfile"/>
+      <profile:Profile rdf:ID="vtkDataSetMapperProfile"/>
     </service:presents>
   </service:Service>
-  <profile:Profile rdf:about="#vtkPolyDataMapperProfile">
+  <profile:Profile rdf:about="#vtkDataSetMapperProfile">
+    <profile:textDescription>This is a VisKo/OWLS Service.</profile:textDescription>
+    <profile:hasInput>
+      <process:Input rdf:ID="xRotation">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>xRotation</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
+    <profile:serviceName>vtkDataSetMapper</profile:serviceName>
+    <profile:hasInput>
+      <process:Input rdf:ID="zRotation">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>zRotation</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
+    <service:presentedBy rdf:resource="#vtkDataSetMapperService"/>
+    <profile:hasInput>
+      <process:Input rdf:ID="backgroundColor">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>backgroundColor</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
     <profile:hasInput>
       <process:Input rdf:ID="yRotation">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
@@ -33,8 +57,13 @@
         <rdfs:label>yRotation</rdfs:label>
       </process:Input>
     </profile:hasInput>
-    <profile:textDescription>This is a VisKo/OWLS Service.</profile:textDescription>
-    <service:presentedBy rdf:resource="#vtkPolyDataMapperService"/>
+    <profile:hasInput>
+      <process:Input rdf:ID="size">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>size</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
     <profile:hasInput>
       <process:Input rdf:ID="url">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
@@ -56,79 +85,44 @@
         <rdfs:label>magnification</rdfs:label>
       </process:Input>
     </profile:hasInput>
-    <profile:hasInput>
-      <process:Input rdf:ID="xRotation">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>xRotation</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <profile:hasInput>
-      <process:Input rdf:ID="zRotation">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>zRotation</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <profile:hasInput>
-      <process:Input rdf:ID="scalarRange">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>scalarRange</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <profile:hasInput>
-      <process:Input rdf:ID="backgroundColor">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>backgroundColor</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <profile:hasInput>
-      <process:Input rdf:ID="size">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>size</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <profile:serviceName>vtkPolyDataMapper</profile:serviceName>
   </profile:Profile>
-  <process:AtomicProcess rdf:about="#vtkPolyDataMapperProcess">
-    <process:hasInput rdf:resource="#magnification"/>
-    <process:hasInput rdf:resource="#yRotation"/>
+  <process:AtomicProcess rdf:about="#vtkDataSetMapperProcess">
     <process:hasInput rdf:resource="#xRotation"/>
     <process:hasInput rdf:resource="#size"/>
-    <process:hasOutput rdf:resource="#return"/>
-    <process:hasInput rdf:resource="#scalarRange"/>
-    <rdfs:label>vtkPolyDataMapperProcess</rdfs:label>
-    <process:hasInput rdf:resource="#url"/>
+    <process:hasInput rdf:resource="#magnification"/>
     <process:hasInput rdf:resource="#zRotation"/>
+    <rdfs:label>vtkDataSetMapperProcess</rdfs:label>
     <process:hasInput rdf:resource="#backgroundColor"/>
-    <service:describes rdf:resource="#vtkPolyDataMapperService"/>
+    <service:describes rdf:resource="#vtkDataSetMapperService"/>
+    <process:hasInput rdf:resource="#yRotation"/>
+    <process:hasOutput rdf:resource="#return"/>
+    <process:hasInput rdf:resource="#url"/>
   </process:AtomicProcess>
-  <grounding:WsdlGrounding rdf:about="#vtkPolyDataMapperGrounding">
+  <grounding:WsdlGrounding rdf:about="#vtkDataSetMapperGrounding">
     <grounding:hasAtomicProcessGrounding>
-      <grounding:WsdlAtomicProcessGrounding rdf:ID="vtkPolyDataMapperAtomicProcessGrounding"/>
+      <grounding:WsdlAtomicProcessGrounding rdf:ID="vtkDataSetMapperAtomicProcessGrounding"/>
     </grounding:hasAtomicProcessGrounding>
-    <service:supportedBy rdf:resource="#vtkPolyDataMapperService"/>
+    <service:supportedBy rdf:resource="#vtkDataSetMapperService"/>
   </grounding:WsdlGrounding>
-  <grounding:WsdlAtomicProcessGrounding rdf:about="#vtkPolyDataMapperAtomicProcessGrounding">
+  <grounding:WsdlAtomicProcessGrounding rdf:about="#vtkDataSetMapperAtomicProcessGrounding">
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#scalarRange</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#scalarRange"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#yRotation</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#yRotation"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
+    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://services.trustlab.utep.edu#vtkDataSetMapperResponse</grounding:wsdlOutputMessage>
     <grounding:wsdlOperation>
       <grounding:WsdlOperationRef>
         <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#vtkPolyDataMapper</grounding:operation>
+        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#vtkDataSetMapper</grounding:operation>
       </grounding:WsdlOperationRef>
     </grounding:wsdlOperation>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#magnification</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#magnification"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#url</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#url"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlInput>
@@ -139,12 +133,27 @@
     </grounding:wsdlInput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#magnification</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#magnification"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#size</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#size"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:owlsProcess rdf:resource="#vtkDataSetMapperProcess"/>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#zRotation</grounding:wsdlMessagePart>
         <grounding:owlsParameter rdf:resource="#zRotation"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#vtkPolyDataMapperRequest</grounding:wsdlInputMessage>
+    >http://services.trustlab.utep.edu#vtkDataSetMapperRequest</grounding:wsdlInputMessage>
     <grounding:wsdlOutput>
       <grounding:WsdlOutputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
@@ -153,31 +162,8 @@
     </grounding:wsdlOutput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#size</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#size"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#xRotation</grounding:wsdlMessagePart>
         <grounding:owlsParameter rdf:resource="#xRotation"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#vtkPolyDataMapperResponse</grounding:wsdlOutputMessage>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#url</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#url"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:owlsProcess rdf:resource="#vtkPolyDataMapperProcess"/>
-    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#yRotation</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#yRotation"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
   </grounding:WsdlAtomicProcessGrounding>

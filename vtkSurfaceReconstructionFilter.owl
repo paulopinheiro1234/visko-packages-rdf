@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <rdf:RDF
-    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/csv2tabular.owl"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
@@ -12,20 +11,21 @@
     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
     xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/csv2tabular.owl">
-  <service:Service rdf:ID="csv2tabularService">
-    <rdfs:label>CSV to Tabular ASCII</rdfs:label>
+    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkSurfaceReconstructionFilter.owl"
+  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkSurfaceReconstructionFilter.owl">
+  <service:Service rdf:ID="vtkSurfaceReconstructionFilterService">
+    <rdfs:label>vtkSurfaceReconstructionFilter</rdfs:label>
     <service:supports>
-      <grounding:WsdlGrounding rdf:ID="csv2tabularGrounding"/>
+      <grounding:WsdlGrounding rdf:ID="vtkSurfaceReconstructionFilterGrounding"/>
     </service:supports>
     <service:describedBy>
-      <process:AtomicProcess rdf:ID="csv2tabularProcess"/>
+      <process:AtomicProcess rdf:ID="vtkSurfaceReconstructionFilterProcess"/>
     </service:describedBy>
     <service:presents>
-      <profile:Profile rdf:ID="csv2tabularProfile"/>
+      <profile:Profile rdf:ID="vtkSurfaceReconstructionFilterProfile"/>
     </service:presents>
   </service:Service>
-  <profile:Profile rdf:about="#csv2tabularProfile">
+  <profile:Profile rdf:about="#vtkSurfaceReconstructionFilterProfile">
     <profile:hasOutput>
       <process:Output rdf:ID="return">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
@@ -41,22 +41,22 @@
       </process:Input>
     </profile:hasInput>
     <profile:textDescription>This is a VisKo/OWLS Service.</profile:textDescription>
-    <profile:serviceName>csv2tabular</profile:serviceName>
-    <service:presentedBy rdf:resource="#csv2tabularService"/>
+    <profile:serviceName>vtkSurfaceReconstructionFilter</profile:serviceName>
+    <service:presentedBy rdf:resource="#vtkSurfaceReconstructionFilterService"/>
   </profile:Profile>
-  <process:AtomicProcess rdf:about="#csv2tabularProcess">
+  <process:AtomicProcess rdf:about="#vtkSurfaceReconstructionFilterProcess">
     <process:hasOutput rdf:resource="#return"/>
     <process:hasInput rdf:resource="#url"/>
-    <service:describes rdf:resource="#csv2tabularService"/>
-    <rdfs:label>csv2tabularProcess</rdfs:label>
+    <service:describes rdf:resource="#vtkSurfaceReconstructionFilterService"/>
+    <rdfs:label>vtkSurfaceReconstructionFilterProcess</rdfs:label>
   </process:AtomicProcess>
-  <grounding:WsdlGrounding rdf:about="#csv2tabularGrounding">
+  <grounding:WsdlGrounding rdf:about="#vtkSurfaceReconstructionFilterGrounding">
     <grounding:hasAtomicProcessGrounding>
-      <grounding:WsdlAtomicProcessGrounding rdf:ID="csv2tabularAtomicProcessGrounding"/>
+      <grounding:WsdlAtomicProcessGrounding rdf:ID="vtkSurfaceReconstructionFilterAtomicProcessGrounding"/>
     </grounding:hasAtomicProcessGrounding>
-    <service:supportedBy rdf:resource="#csv2tabularService"/>
+    <service:supportedBy rdf:resource="#vtkSurfaceReconstructionFilterService"/>
   </grounding:WsdlGrounding>
-  <grounding:WsdlAtomicProcessGrounding rdf:about="#csv2tabularAtomicProcessGrounding">
+  <grounding:WsdlAtomicProcessGrounding rdf:about="#vtkSurfaceReconstructionFilterAtomicProcessGrounding">
     <grounding:wsdlOutput>
       <grounding:WsdlOutputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
@@ -70,17 +70,17 @@
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#csv2tabularResponse</grounding:wsdlOutputMessage>
+    >http://services.trustlab.utep.edu#vtkSurfaceReconstructionFilterResponse</grounding:wsdlOutputMessage>
     <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#csv2tabularRequest</grounding:wsdlInputMessage>
+    >http://services.trustlab.utep.edu#vtkSurfaceReconstructionFilterRequest</grounding:wsdlInputMessage>
     <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
     >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
     <grounding:wsdlOperation>
       <grounding:WsdlOperationRef>
         <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#csv2tabular</grounding:operation>
+        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#vtkSurfaceReconstructionFilter</grounding:operation>
       </grounding:WsdlOperationRef>
     </grounding:wsdlOperation>
-    <grounding:owlsProcess rdf:resource="#csv2tabularProcess"/>
+    <grounding:owlsProcess rdf:resource="#vtkSurfaceReconstructionFilterProcess"/>
   </grounding:WsdlAtomicProcessGrounding>
 </rdf:RDF>

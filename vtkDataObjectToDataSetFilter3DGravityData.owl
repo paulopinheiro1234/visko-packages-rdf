@@ -1,37 +1,31 @@
 <?xml version="1.0"?>
 <rdf:RDF
-    xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
-    xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
-    xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
-    xmlns:viskoS="https://raw.github.com/nicholasdelrio/visko/master/resources/ontologies/visko-service.owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
     xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
+    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataObjectToDataSetFilter3DGravityData.owl"
     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkTIFFReader.owl"
-  xml:base="http://localhost:8080/alfresco//webdav/Projects/visko-packages-rdf/vtkTIFFReader.owl">
-  <owl:Ontology rdf:about="">
-    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Grounding.owl"/>
-    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Profile.owl"/>
-    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Service.owl"/>
-  </owl:Ontology>
-  <service:Service rdf:ID="vtkTIFFReaderService">
-    <rdfs:label>vtkTIFFReader</rdfs:label>
+  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataObjectToDataSetFilter3DGravityData.owl">
+  <service:Service rdf:ID="vtkDataObjectToDataSetFilter3DGravityDataService">
+    <rdfs:label>vtkDataObjectToDataSetFilter3DGravityData</rdfs:label>
     <service:supports>
-      <grounding:WsdlGrounding rdf:ID="vtkTIFFReaderGrounding"/>
+      <grounding:WsdlGrounding rdf:ID="vtkDataObjectToDataSetFilter3DGravityDataGrounding"/>
     </service:supports>
     <service:describedBy>
-      <process:AtomicProcess rdf:ID="vtkTIFFReaderProcess"/>
+      <process:AtomicProcess rdf:ID="vtkDataObjectToDataSetFilter3DGravityDataProcess"/>
     </service:describedBy>
     <service:presents>
-      <profile:Profile rdf:ID="vtkTIFFReaderProfile"/>
+      <profile:Profile rdf:ID="vtkDataObjectToDataSetFilter3DGravityDataProfile"/>
     </service:presents>
   </service:Service>
-  <profile:Profile rdf:about="#vtkTIFFReaderProfile">
+  <profile:Profile rdf:about="#vtkDataObjectToDataSetFilter3DGravityDataProfile">
     <profile:hasOutput>
       <process:Output rdf:ID="return">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
@@ -40,13 +34,6 @@
       </process:Output>
     </profile:hasOutput>
     <profile:hasInput>
-      <process:Input rdf:ID="littleEndian">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>littleEndian</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <profile:hasInput>
       <process:Input rdf:ID="url">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
@@ -54,23 +41,22 @@
       </process:Input>
     </profile:hasInput>
     <profile:textDescription>This is a VisKo/OWLS Service.</profile:textDescription>
-    <profile:serviceName>vtkTIFFReader</profile:serviceName>
-    <service:presentedBy rdf:resource="#vtkTIFFReaderService"/>
+    <profile:serviceName>vtkDataObjectToDataSetFilter3DGravityData</profile:serviceName>
+    <service:presentedBy rdf:resource="#vtkDataObjectToDataSetFilter3DGravityDataService"/>
   </profile:Profile>
-  <process:AtomicProcess rdf:about="#vtkTIFFReaderProcess">
+  <process:AtomicProcess rdf:about="#vtkDataObjectToDataSetFilter3DGravityDataProcess">
     <process:hasOutput rdf:resource="#return"/>
-    <process:hasInput rdf:resource="#littleEndian"/>
     <process:hasInput rdf:resource="#url"/>
-    <service:describes rdf:resource="#vtkTIFFReaderService"/>
-    <rdfs:label>vtkTIFFReaderProcess</rdfs:label>
+    <service:describes rdf:resource="#vtkDataObjectToDataSetFilter3DGravityDataService"/>
+    <rdfs:label>vtkDataObjectToDataSetFilter3DGravityDataProcess</rdfs:label>
   </process:AtomicProcess>
-  <grounding:WsdlGrounding rdf:about="#vtkTIFFReaderGrounding">
+  <grounding:WsdlGrounding rdf:about="#vtkDataObjectToDataSetFilter3DGravityDataGrounding">
     <grounding:hasAtomicProcessGrounding>
-      <grounding:WsdlAtomicProcessGrounding rdf:ID="vtkTIFFReaderAtomicProcessGrounding"/>
+      <grounding:WsdlAtomicProcessGrounding rdf:ID="vtkDataObjectToDataSetFilter3DGravityDataAtomicProcessGrounding"/>
     </grounding:hasAtomicProcessGrounding>
-    <service:supportedBy rdf:resource="#vtkTIFFReaderService"/>
+    <service:supportedBy rdf:resource="#vtkDataObjectToDataSetFilter3DGravityDataService"/>
   </grounding:WsdlGrounding>
-  <grounding:WsdlAtomicProcessGrounding rdf:about="#vtkTIFFReaderAtomicProcessGrounding">
+  <grounding:WsdlAtomicProcessGrounding rdf:about="#vtkDataObjectToDataSetFilter3DGravityDataAtomicProcessGrounding">
     <grounding:wsdlOutput>
       <grounding:WsdlOutputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
@@ -79,28 +65,22 @@
     </grounding:wsdlOutput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#littleEndian</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#littleEndian"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#url</grounding:wsdlMessagePart>
         <grounding:owlsParameter rdf:resource="#url"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#vtkTIFFReaderResponse</grounding:wsdlOutputMessage>
+    >http://services.trustlab.utep.edu#vtkDataObjectToDataSetFilter3DGravityDataResponse</grounding:wsdlOutputMessage>
     <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#vtkTIFFReaderRequest</grounding:wsdlInputMessage>
+    >http://services.trustlab.utep.edu#vtkDataObjectToDataSetFilter3DGravityDataRequest</grounding:wsdlInputMessage>
     <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
     >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
     <grounding:wsdlOperation>
       <grounding:WsdlOperationRef>
         <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#vtkTIFFReader</grounding:operation>
+        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#vtkDataObjectToDataSetFilter3DGravityData</grounding:operation>
       </grounding:WsdlOperationRef>
     </grounding:wsdlOperation>
-    <grounding:owlsProcess rdf:resource="#vtkTIFFReaderProcess"/>
+    <grounding:owlsProcess rdf:resource="#vtkDataObjectToDataSetFilter3DGravityDataProcess"/>
   </grounding:WsdlAtomicProcessGrounding>
 </rdf:RDF>
