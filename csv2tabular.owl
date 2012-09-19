@@ -14,7 +14,7 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/csv2tabular.owl">
   <service:Service rdf:ID="csv2tabularService">
-    <rdfs:label>CSV to Tabular ASCII</rdfs:label>
+    <rdfs:label>csv2tabular</rdfs:label>
     <service:supports>
       <grounding:WsdlGrounding rdf:ID="csv2tabularGrounding"/>
     </service:supports>
