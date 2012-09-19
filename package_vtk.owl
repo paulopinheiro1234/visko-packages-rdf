@@ -793,19 +793,19 @@
     <viskoS:declaresBindings>
       <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-6">
         <owlsProcess:valueData>-260/-170</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#scalarRange</owlsProcess:toParam>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#scalarRange</owlsProcess:toParam>
       </owlsProcess:InputBinding>
     </viskoS:declaresBindings>
     <viskoS:declaresBindings>
       <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-9">
         <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#zRotation</owlsProcess:toParam>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#yRotation</owlsProcess:toParam>
       </owlsProcess:InputBinding>
     </viskoS:declaresBindings>
     <viskoS:declaresBindings>
       <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-10">
-        <owlsProcess:valueData>400/300</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#size</owlsProcess:toParam>
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#zRotation</owlsProcess:toParam>
       </owlsProcess:InputBinding>
     </viskoS:declaresBindings>
     <viskoS:declaresBindings>
@@ -816,105 +816,111 @@
     </viskoS:declaresBindings>
     <viskoS:declaresBindings>
       <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-3">
-        <owlsProcess:valueData>-260/-170</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter2D.owl#scalarRange</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-15">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#zRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-1">
-        <owlsProcess:valueData>0/30/0/30/10</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkExtractVOI2D.owl#dataExtent</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-7">
-        <owlsProcess:valueData>-70</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#xRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-20">
-        <owlsProcess:valueData>0.25</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkGlyph3DSphereSource.owl#scaleFactor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:profiles rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#d19"/>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-13">
-        <owlsProcess:valueData>-70</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#xRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-18">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#magnification</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-11">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#backgroundColor</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-4">
-        <owlsProcess:valueData>20</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#numContours</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-14">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#yRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-16">
-        <owlsProcess:valueData>400/300</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#size</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-19">
-        <owlsProcess:valueData>0.06</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkGlyph3DSphereSource.owl#radius</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-12">
-        <owlsProcess:valueData>3</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#magnification</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-8">
-        <owlsProcess:valueData>0</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#yRotation</owlsProcess:toParam>
-      </owlsProcess:InputBinding>
-    </viskoS:declaresBindings>
-    <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-2">
         <owlsProcess:valueData>20</owlsProcess:valueData>
         <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter2D.owl#numContours</owlsProcess:toParam>
       </owlsProcess:InputBinding>
     </viskoS:declaresBindings>
     <viskoS:declaresBindings>
-      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-5">
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-15">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#yRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-1">
+        <owlsProcess:valueData>1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkShepardMethod.owl#maximumDistance</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-7">
         <owlsProcess:valueData>-260/-170</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#scalarRange</owlsProcess:toParam>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#scalarRange</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-20">
+        <owlsProcess:valueData>0.06</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkGlyph3DSphereSource.owl#radius</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:profiles rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#d19"/>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-13">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-18">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-11">
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-4">
+        <owlsProcess:valueData>-260/-170</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter2D.owl#scalarRange</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-14">
+        <owlsProcess:valueData>-70</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-16">
+        <owlsProcess:valueData>0</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#zRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-19">
+        <owlsProcess:valueData>3</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#magnification</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-12">
+        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#backgroundColor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-8">
+        <owlsProcess:valueData>-70</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#xRotation</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-2">
+        <owlsProcess:valueData>0/30/0/30/10</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkExtractVOI2D.owl#dataExtent</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-5">
+        <owlsProcess:valueData>20</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter3D.owl#numContours</owlsProcess:toParam>
       </owlsProcess:InputBinding>
     </viskoS:declaresBindings>
     <viskoS:declaresBindings>
       <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-17">
-        <owlsProcess:valueData>1/1/1</owlsProcess:valueData>
-        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#backgroundColor</owlsProcess:toParam>
+        <owlsProcess:valueData>400/300</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-21">
+        <owlsProcess:valueData>0.25</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkGlyph3DSphereSource.owl#scaleFactor</owlsProcess:toParam>
       </owlsProcess:InputBinding>
     </viskoS:declaresBindings>
   </viskoS:InputParameterBindings>
