@@ -107,14 +107,14 @@
   <grounding:WsdlAtomicProcessGrounding rdf:about="#vtkDataSetMapperAtomicProcessGrounding">
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#url</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#url"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#magnification</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#magnification"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#backgroundColor</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#backgroundColor"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#url</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#url"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlOutput>
@@ -125,26 +125,37 @@
     </grounding:wsdlOutput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#backgroundColor</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#backgroundColor"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#size</grounding:wsdlMessagePart>
         <grounding:owlsParameter rdf:resource="#size"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#magnification</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#magnification"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#zRotation</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#zRotation"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
+    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://services.trustlab.utep.edu#vtkDataSetMapperResponse</grounding:wsdlOutputMessage>
     <grounding:wsdlOperation>
       <grounding:WsdlOperationRef>
         <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#vtkDataSetMapper</grounding:operation>
       </grounding:WsdlOperationRef>
     </grounding:wsdlOperation>
+    <grounding:owlsProcess rdf:resource="#vtkDataSetMapperProcess"/>
+    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://services.trustlab.utep.edu#vtkDataSetMapperRequest</grounding:wsdlInputMessage>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#zRotation</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#zRotation"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#yRotation</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#yRotation"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlInput>
@@ -153,17 +164,6 @@
         <grounding:owlsParameter rdf:resource="#xRotation"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#yRotation</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#yRotation"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#vtkDataSetMapperResponse</grounding:wsdlOutputMessage>
-    <grounding:owlsProcess rdf:resource="#vtkDataSetMapperProcess"/>
-    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#vtkDataSetMapperRequest</grounding:wsdlInputMessage>
     <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
     >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
   </grounding:WsdlAtomicProcessGrounding>
