@@ -256,7 +256,7 @@
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >nearneighbor-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://gmt.soest.hawaii.edu/gmt-data.owl#2D_Grid_COARDS"/>
-        <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#d18"/>
+        <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#FieldTrimmedGravityData"/>
         <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/NETCDF.owl#NETCDF"/>
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/SPACESEPARATEDVALUES.owl#SPACESEPARATEDVALUES"/>
         <rdfs:label>GMT nearneighbor</rdfs:label>
@@ -293,7 +293,7 @@
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >surface-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://gmt.soest.hawaii.edu/gmt-data.owl#2D_Grid_COARDS"/>
-        <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#d18"/>
+        <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#FieldTrimmedGravityData"/>
         <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/NETCDF.owl#NETCDF"/>
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/SPACESEPARATEDVALUES.owl#SPACESEPARATEDVALUES"/>
         <rdfs:label>GMT surface</rdfs:label>
