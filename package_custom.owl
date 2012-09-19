@@ -18,7 +18,7 @@
       </viskoS:Toolkit>
     </viskoS:supportedByToolkit>
     <viskoS:implementsOperator>
-      <viskoO:DataFilter rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_custom.owl#GravityDataFieldFilter-operator">
+      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_custom.owl#GravityDataFieldFilter-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >GravityDataFieldFilter-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#FieldTrimmedGravityData"/>
@@ -27,7 +27,7 @@
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/SPACESEPARATEDVALUES.owl#SPACESEPARATEDVALUES"/>
         <rdfs:label>GravityDataFieldFilter</rdfs:label>
         <rdfs:comment>Filter out field (i.e., columns) from gravity datasets</rdfs:comment>
-      </viskoO:DataFilter>
+      </viskoO:Operator>
     </viskoS:implementsOperator>
     <rdfs:label>GravityDataFieldFilter</rdfs:label>
     <rdfs:comment>Filter out field (i.e., columns) from gravity datasets</rdfs:comment>

@@ -1138,7 +1138,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkExtractVOIXYPlane.owl#vtkExtractVOIXYPlaneService"/>
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:DataFilter rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkExtractVOIXYPlane-operator">
+      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkExtractVOIXYPlane-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkExtractVOIXYPlane-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData2D"/>
@@ -1147,7 +1147,7 @@
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
         <rdfs:label>vtkExtractVOIXYPlane</rdfs:label>
         <rdfs:comment>Extracts a subset XY plane by specifying plane bounds and location on Z axix</rdfs:comment>
-      </viskoO:DataFilter>
+      </viskoO:Operator>
     </viskoS:implementsOperator>
     <rdfs:label>vtkExtractVOIXYPlane</rdfs:label>
     <rdfs:comment>Extracts a subset XY plane by specifying plane bounds and location on Z axix</rdfs:comment>
