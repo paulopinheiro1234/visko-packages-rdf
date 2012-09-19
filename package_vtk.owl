@@ -21,8 +21,8 @@
       <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#float2ShortThr-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >float2ShortThr-operator</pmlp:hasName>
-        <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasOutputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#Array1DUnsignedShortInteger"/>
+        <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#Array1DFloat"/>
         <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
         <rdfs:label>float2ShortThr</rdfs:label>
@@ -31,24 +31,6 @@
     </viskoS:implementsOperator>
     <rdfs:label>float2ShortThr</rdfs:label>
     <rdfs:comment>Converts float arrays to short ints</rdfs:comment>
-  </viskoS:Service>
-  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkSurfaceReconstructionFilter">
-    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkSurfaceReconstructionFilter.owl#vtkSurfaceReconstructionFilterService"/>
-    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
-    <viskoS:implementsOperator>
-      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkSurfaceReconstructionFilter-operator">
-        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >vtkSurfaceReconstructionFilter-operator</pmlp:hasName>
-        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3D"/>
-        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkPolyData"/>
-        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
-        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
-        <rdfs:label>vtkSurfaceReconstructionFilter</rdfs:label>
-        <rdfs:comment>Generates a vktImageData surface that wraps unstructured vtkPolyData points</rdfs:comment>
-      </viskoO:Operator>
-    </viskoS:implementsOperator>
-    <rdfs:label>vtkSurfaceReconstructionFilter</rdfs:label>
-    <rdfs:comment>Generates a vktImageData surface that wraps unstructured vtkPolyData points</rdfs:comment>
   </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkDataObjectToDataSetFilter3DGravityData">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataObjectToDataSetFilter3DGravityData.owl#vtkDataObjectToDataSetFilter3DGravityDataService"/>
@@ -76,7 +58,7 @@
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkImageDataReader3DIntegers-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3DShortIntegers"/>
-        <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#Array1DInteger"/>
         <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
         <rdfs:label>vtkImageDataReader3DIntegers</rdfs:label>
@@ -90,8 +72,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkExtractVOI2D.owl#vtkExtractVOI2DService"/>
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkExtractVOI2D-operator">
-        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#ContourMap"/>
+      <viskoO:DataFilter rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkExtractVOI2D-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkExtractVOI2D-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData2D"/>
@@ -100,7 +81,7 @@
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
         <rdfs:label>vtkExtractVOI2D</rdfs:label>
         <rdfs:comment>Extracts a subset plane</rdfs:comment>
-      </viskoO:ViewMapper>
+      </viskoO:DataFilter>
     </viskoS:implementsOperator>
     <rdfs:label>vtkExtractVOI2D</rdfs:label>
     <rdfs:comment>Extracts a subset plane</rdfs:comment>
@@ -109,7 +90,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkExtractVOI3D.owl#vtkExtractVOI3DService"/>
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
-      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkExtractVOI3D-operator">
+      <viskoO:DataFilter rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkExtractVOI3D-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkExtractVOI3D-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3D"/>
@@ -118,7 +99,7 @@
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
         <rdfs:label>vtkExtractVOI3D</rdfs:label>
         <rdfs:comment>Extracts a subset volume</rdfs:comment>
-      </viskoO:Operator>
+      </viskoO:DataFilter>
     </viskoS:implementsOperator>
     <rdfs:label>vtkExtractVOI3D</rdfs:label>
     <rdfs:comment>Extracts a subset volume</rdfs:comment>
@@ -128,7 +109,7 @@
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkVolume-operator">
-        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#VolumeRendering"/>
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#3D_VolumeRendering"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkVolume-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -857,6 +838,12 @@
         <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkPolyDataMapper.owl#xRotation</owlsProcess:toParam>
       </owlsProcess:InputBinding>
     </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-20">
+        <owlsProcess:valueData>0.25</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkGlyph3DSphereSource.owl#scaleFactor</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
     <viskoS:profiles rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#d19"/>
     <viskoS:declaresBindings>
       <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-13">
@@ -892,6 +879,12 @@
       <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-16">
         <owlsProcess:valueData>400/300</owlsProcess:valueData>
         <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#size</owlsProcess:toParam>
+      </owlsProcess:InputBinding>
+    </viskoS:declaresBindings>
+    <viskoS:declaresBindings>
+      <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#bindings-4-binding-19">
+        <owlsProcess:valueData>0.06</owlsProcess:valueData>
+        <owlsProcess:toParam>https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkGlyph3DSphereSource.owl#radius</owlsProcess:toParam>
       </owlsProcess:InputBinding>
     </viskoS:declaresBindings>
     <viskoS:declaresBindings>
@@ -1169,12 +1162,31 @@
       </owlsProcess:InputBinding>
     </viskoS:declaresBindings>
   </viskoS:InputParameterBindings>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkSurfaceReconstructionAndContourFilter">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkSurfaceReconstructionAndContourFilter.owl#vtkSurfaceReconstructionAndContourFilterService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
+    <viskoS:implementsOperator>
+      <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkSurfaceReconstructionAndContourFilter-operator">
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#3D_SurfacePlot"/>
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >vtkSurfaceReconstructionAndContourFilter-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkPolyData"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkPolyData"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <rdfs:label>vtkSurfaceReconstructionAndContourFilter</rdfs:label>
+        <rdfs:comment>Generates a vktImageData surface that wraps unstructured vtkPolyData points</rdfs:comment>
+      </viskoO:ViewMapper>
+    </viskoS:implementsOperator>
+    <rdfs:label>vtkSurfaceReconstructionAndContourFilter</rdfs:label>
+    <rdfs:comment>Generates a vktImageData surface that wraps unstructured vtkPolyData points</rdfs:comment>
+  </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkDataSetMapper3D">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkDataSetMapper3D.owl#vtkDataSetMapperService"/>
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkDataSetMapper3D-operator">
-        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#RasterCube"/>
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#3D_RasterCube"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkDataSetMapper3D-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -1193,7 +1205,7 @@
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkContourFilter2D-operator">
-        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#ContourMap"/>
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#2D_ContourMap"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkContourFilter2D-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkPolyData"/>
@@ -1215,7 +1227,7 @@
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkImageDataReader3DFloats-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3DFloats"/>
-        <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#Array1DFloat"/>
         <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
         <rdfs:label>vtkImageDataReader3DFloats</rdfs:label>
@@ -1230,7 +1242,7 @@
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkDataSetMapper2D-operator">
-        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#RasterMap"/>
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#2D_RasterMap"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkDataSetMapper2D-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -1244,6 +1256,25 @@
     <rdfs:label>vtkDataSetMapper2D</rdfs:label>
     <rdfs:comment>Convert 2D vtkImageData into a raster map</rdfs:comment>
   </viskoS:Service>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkGlyph3DSphereSource">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkGlyph3DSphereSource.owl#vtkGlyph3DSphereSourceService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
+    <viskoS:implementsOperator>
+      <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkGlyph3DSphereSource-operator">
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#3D_PointPlot"/>
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >vtkGlyph3DSphereSource-operator</pmlp:hasName>
+        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkPolyData"/>
+        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkPolyData"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
+        <rdfs:label>vtkGlyph3DSphereSource</rdfs:label>
+        <rdfs:comment>Generates a plot of glyphs, where the glyphs have been hard coded to be spheres</rdfs:comment>
+      </viskoO:ViewMapper>
+    </viskoS:implementsOperator>
+    <rdfs:label>vtkGlyph3DSphereSource</rdfs:label>
+    <rdfs:comment>Generates a plot of glyphs, where the glyphs have been hard coded to be spheres</rdfs:comment>
+  </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReader3DUnsignedShortIntegers">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkImageDataReader3DUnsignedShortIntegers.owl#vtkImageDataReader3DUnsignedShortIntegersService"/>
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
@@ -1251,8 +1282,8 @@
       <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReader3DUnsignedShortIntegers-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkImageDataReader3DUnsignedShortIntegers-operator</pmlp:hasName>
-        <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:hasInputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3DUnsignedShortIntegers"/>
+        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3DUnsignedShortIntegers"/>
+        <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#Array1DUnsignedShortInteger"/>
         <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
         <rdfs:label>vtkImageDataReader3DUnsignedShortIntegers</rdfs:label>
@@ -1269,8 +1300,8 @@
       <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#int2Short-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >int2Short-operator</pmlp:hasName>
-        <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasOutputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#Array1DUnsignedShortInteger"/>
+        <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#Array1DInteger"/>
         <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
         <rdfs:label>int2Short</rdfs:label>
@@ -1285,7 +1316,7 @@
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtk"/>
     <viskoS:implementsOperator>
       <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkContourFilter3D-operator">
-        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#IsoSurfacesRendering"/>
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#3D_IsoSurfacesRendering"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkContourFilter3D-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkPolyData"/>

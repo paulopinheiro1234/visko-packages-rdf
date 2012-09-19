@@ -18,7 +18,7 @@
       </viskoS:Toolkit>
     </viskoS:supportedByToolkit>
     <viskoS:implementsOperator>
-      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ghostscript.owl#ps2pdf-operator">
+      <viskoO:DataFilter rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ghostscript.owl#ps2pdf-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >ps2pdf-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -27,7 +27,7 @@
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
         <rdfs:label>PS to PDF</rdfs:label>
         <rdfs:comment>Converts PostScript (PS) to Portable Document Format (PDF)</rdfs:comment>
-      </viskoO:Operator>
+      </viskoO:DataFilter>
     </viskoS:implementsOperator>
     <rdfs:label>PS to PDF</rdfs:label>
     <rdfs:comment>Converts PostScript (PS) to Portable Document Format (PDF)</rdfs:comment>
@@ -36,7 +36,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/ps2png.owl#ps2pngService"/>
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ghostscript.owl#ghostscript"/>
     <viskoS:implementsOperator>
-      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ghostscript.owl#ps2png-operator">
+      <viskoO:DataFilter rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ghostscript.owl#ps2png-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >ps2png-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -45,7 +45,7 @@
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
         <rdfs:label>PS to PNG</rdfs:label>
         <rdfs:comment>Converts PostScript (PS) to Portable Network Graphic (PNG)</rdfs:comment>
-      </viskoO:Operator>
+      </viskoO:DataFilter>
     </viskoS:implementsOperator>
     <rdfs:label>PS to PNG</rdfs:label>
     <rdfs:comment>Converts PostScript (PS) to Portable Network Graphic (PNG)</rdfs:comment>
@@ -54,7 +54,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/pdf2png.owl#pdf2pngService"/>
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ghostscript.owl#ghostscript"/>
     <viskoS:implementsOperator>
-      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ghostscript.owl#pdf2png-operator">
+      <viskoO:DataFilter rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_ghostscript.owl#pdf2png-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >pdf2png-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -63,7 +63,7 @@
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PDF.owl#PDF"/>
         <rdfs:label>PDF to PNG</rdfs:label>
         <rdfs:comment>Converts Portable Document Format (PDF) to Portable Network Graphic (PNG)</rdfs:comment>
-      </viskoO:Operator>
+      </viskoO:DataFilter>
     </viskoS:implementsOperator>
     <rdfs:label>PDF to PNG</rdfs:label>
     <rdfs:comment>Converts Portable Document Format (PDF) to Portable Network Graphic (PNG)</rdfs:comment>

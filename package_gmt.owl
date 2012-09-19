@@ -306,7 +306,7 @@
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/csv2tabular.owl#csv2tabularService"/>
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
     <viskoS:implementsOperator>
-      <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#csv2tabular-operator">
+      <viskoO:DataFilter rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#csv2tabular-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >csv2tabular-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -315,7 +315,7 @@
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/CSV.owl#CSV"/>
         <rdfs:label>CSV to Tabular ASCII</rdfs:label>
         <rdfs:comment>Convert comma separated values into ASCII tabular data</rdfs:comment>
-      </viskoO:Operator>
+      </viskoO:DataFilter>
     </viskoS:implementsOperator>
     <rdfs:label>CSV to Tabular ASCII</rdfs:label>
     <rdfs:comment>Convert comma separated values into ASCII tabular data</rdfs:comment>
@@ -325,7 +325,7 @@
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
     <viskoS:implementsOperator>
       <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#grdimage-operator">
-        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#RasterMap"/>
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#2D_RasterMap"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >grdimage-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -362,7 +362,7 @@
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
     <viskoS:implementsOperator>
       <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#psxy-operator">
-        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#PointPlot"/>
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#2D_PointMap"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >psxy-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -381,7 +381,7 @@
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
     <viskoS:implementsOperator>
       <viskoO:ViewMapper rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#grdcontour-operator">
-        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#ContourMap"/>
+        <viskoO:mapsToView rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#2D_ContourMap"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >grdcontour-operator</pmlp:hasName>
         <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
