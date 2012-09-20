@@ -395,7 +395,7 @@
       <viskoO:Operator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_vtk.owl#vtkImageDataReader3DIntegers-operator">
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >vtkImageDataReader3DIntegers-operator</pmlp:hasName>
-        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3DShortIntegers"/>
+        <viskoO:hasOutputDataType rdf:resource="http://www.vtk.org/vtk-data.owl#vtkImageData3DIntegers"/>
         <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/HolesCode/HolesCodeSAW3.owl#Array1DInteger"/>
         <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/XML.owl#XML"/>
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/LITTLE-ENDIAN-SEQUENCE.owl#LITTLE-ENDIAN-SEQUENCE"/>
