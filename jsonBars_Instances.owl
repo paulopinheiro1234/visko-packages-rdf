@@ -57,16 +57,7 @@
     </grounding:wsdlOutput>
     <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
     >http://services.trustlab.utep.edu#jsonBars_InstancesRequest</grounding:wsdlInputMessage>
-    <grounding:wsdlOperation>
-      <grounding:WsdlOperationRef/>
-    </grounding:wsdlOperation>
     <grounding:owlsProcess rdf:resource="#jsonBars_InstancesProcess"/>
-    <grounding:wsdlOutput>
-      <grounding:WsdlOutputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#return"/>
-      </grounding:WsdlOutputMessageMap>
-    </grounding:wsdlOutput>
     <grounding:wsdlOutput>
       <grounding:WsdlOutputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
@@ -81,6 +72,18 @@
         <grounding:owlsParameter rdf:resource="#return"/>
       </grounding:WsdlOutputMessageMap>
     </grounding:wsdlOutput>
+    <grounding:wsdlOutput>
+      <grounding:WsdlOutputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#return"/>
+      </grounding:WsdlOutputMessageMap>
+    </grounding:wsdlOutput>
+    <grounding:wsdlOutput>
+      <grounding:WsdlOutputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#return"/>
+      </grounding:WsdlOutputMessageMap>
+    </grounding:wsdlOutput>
     <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
     >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
     <grounding:wsdlOutput>
@@ -89,12 +92,9 @@
         <grounding:owlsParameter rdf:resource="#return"/>
       </grounding:WsdlOutputMessageMap>
     </grounding:wsdlOutput>
-    <grounding:wsdlOutput>
-      <grounding:WsdlOutputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#return"/>
-      </grounding:WsdlOutputMessageMap>
-    </grounding:wsdlOutput>
+    <grounding:wsdlOperation>
+      <grounding:WsdlOperationRef/>
+    </grounding:wsdlOperation>
     <grounding:wsdlOutput>
       <grounding:WsdlOutputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>

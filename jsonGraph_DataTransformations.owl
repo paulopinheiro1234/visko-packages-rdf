@@ -49,14 +49,14 @@
     <service:supportedBy rdf:resource="#jsonGraph_DataTransformationsService"/>
   </grounding:WsdlGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:about="#jsonGraph_DataTransformationsAtomicProcessGrounding">
-    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#jsonGraph_DataTransformationsRequest</grounding:wsdlInputMessage>
     <grounding:wsdlOutput>
       <grounding:WsdlOutputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
         <grounding:owlsParameter rdf:resource="#return"/>
       </grounding:WsdlOutputMessageMap>
     </grounding:wsdlOutput>
+    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://services.trustlab.utep.edu#jsonGraph_DataTransformationsRequest</grounding:wsdlInputMessage>
     <grounding:wsdlOperation>
       <grounding:WsdlOperationRef/>
     </grounding:wsdlOperation>
@@ -75,13 +75,13 @@
     </grounding:wsdlOutput>
     <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
     >http://services.trustlab.utep.edu#jsonGraph_DataTransformationsResponse</grounding:wsdlOutputMessage>
+    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
     <grounding:wsdlOutput>
       <grounding:WsdlOutputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
         <grounding:owlsParameter rdf:resource="#return"/>
       </grounding:WsdlOutputMessageMap>
     </grounding:wsdlOutput>
-    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
   </grounding:WsdlAtomicProcessGrounding>
 </rdf:RDF>
