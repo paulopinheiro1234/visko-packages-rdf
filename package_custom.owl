@@ -51,6 +51,7 @@
     <rdfs:comment>Converts integer arrays to unsigned short integers</rdfs:comment>
   </viskoS:Service>
   <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_custom.owl#visko-instances-viewer">
+    <viskoO:hasEndpoint>http://iw.cs.utep.edu:8080/d3-viewers/Parameterized_Bars_Instances.html</viskoO:hasEndpoint>
     <viskoO:partOfViewerSet>
       <viskoO:ViewerSet rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_custom.owl#data-driven-documents">
         <rdfs:label>D3 Viewer Set</rdfs:label>
@@ -100,6 +101,7 @@
     </viskoS:declaresBindings>
   </viskoS:InputParameterBindings>
   <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_custom.owl#visko-data-transformations-viewer">
+    <viskoO:hasEndpoint>http://iw.cs.utep.edu:8080/d3-viewers/Parameterized_Graph_DataTransformations.html</viskoO:hasEndpoint>
     <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_custom.owl#data-driven-documents"/>
     <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >visko-data-transformations-viewer</pmlp:hasName>
@@ -146,6 +148,7 @@
     <rdfs:comment>Converts float arrays to short ints</rdfs:comment>
   </viskoS:Service>
   <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_custom.owl#visko-operator-paths-viewer">
+    <viskoO:hasEndpoint>http://iw.cs.utep.edu:8080/d3-viewers/Parameterized_Graph_OperatorPaths.html</viskoO:hasEndpoint>
     <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_custom.owl#data-driven-documents"/>
     <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >visko-operator-paths-viewer</pmlp:hasName>
