@@ -84,6 +84,29 @@
       </owlsProcess:InputBinding>
     </viskoS:declaresBindings>
   </viskoS:InputParameterBindings>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#grd2xyz_esri">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/grd2xyz_esri.owl#grd2xyz_esriService"/>
+    <viskoS:supportedByToolkit>
+      <viskoS:Toolkit rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt">
+        <rdfs:label>Generic Mapping Tools</rdfs:label>
+        <rdfs:comment>Generic Mapping Tools</rdfs:comment>
+      </viskoS:Toolkit>
+    </viskoS:supportedByToolkit>
+    <viskoS:implementsOperator>
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#grd2xyz_esri-operator">
+        <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/ESRIGRID.owl#ESRIGRID"/>
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >grd2xyz_esri-operator</pmlp:hasName>
+        <viskoO:hasInputDataType rdf:resource="http://gmt.soest.hawaii.edu/gmt-data.owl#2D_Grid_COARDS"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/NETCDF.owl#NETCDF"/>
+        <rdfs:label>GMT grd2xyz_esri</rdfs:label>
+        <rdfs:comment>Convert NetCDF COARDS compliant dataset to an ESRI ArcInfo ASCII Grid</rdfs:comment>
+      </viskoO:Transformer>
+    </viskoS:implementsOperator>
+    <rdfs:label>GMT grd2xyz_esri</rdfs:label>
+    <rdfs:comment>Convert NetCDF COARDS compliant dataset to an ESRI ArcInfo ASCII Grid</rdfs:comment>
+  </viskoS:Service>
   <viskoS:InputParameterBindings rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#bindings-0">
     <viskoS:declaresBindings>
       <owlsProcess:InputBinding rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#bindings-0-binding-19">
@@ -245,12 +268,7 @@
   </viskoS:InputParameterBindings>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#nearneighbor">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/nearneighbor.owl#nearneighborService"/>
-    <viskoS:supportedByToolkit>
-      <viskoS:Toolkit rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt">
-        <rdfs:label>Generic Mapping Tools</rdfs:label>
-        <rdfs:comment>Generic Mapping Tools</rdfs:comment>
-      </viskoS:Toolkit>
-    </viskoS:supportedByToolkit>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
     <viskoS:implementsOperator>
       <viskoO:Interpolator rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#nearneighbor-operator">
         <viskoO:hasOutputDataType rdf:resource="http://gmt.soest.hawaii.edu/gmt-data.owl#2D_Grid_COARDS"/>
@@ -303,6 +321,43 @@
     <rdfs:label>GMT surface</rdfs:label>
     <rdfs:comment>Employ tensioned splines to generate gridded data in netCDF from ascii tabular point data</rdfs:comment>
   </viskoS:Service>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#psxyz">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/psxyz.owl#psxyzService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
+    <viskoS:implementsOperator>
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#psxyz-operator">
+        <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >psxyz-operator</pmlp:hasName>
+        <viskoO:mapsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#3D_BarChart"/>
+        <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#d18"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/SPACESEPARATEDVALUES.owl#SPACESEPARATEDVALUES"/>
+        <rdfs:label>GMT psxyz</rdfs:label>
+        <rdfs:comment>Generate 3D bar chart of XYZ data</rdfs:comment>
+      </viskoO:Transformer>
+    </viskoS:implementsOperator>
+    <rdfs:label>GMT psxyz</rdfs:label>
+    <rdfs:comment>Generate 3D bar chart of XYZ data</rdfs:comment>
+  </viskoS:Service>
+  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#grd2xyz">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/grd2xyz.owl#grd2xyzService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
+    <viskoS:implementsOperator>
+      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#grd2xyz-operator">
+        <viskoO:hasOutputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#d18"/>
+        <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/SPACESEPARATEDVALUES.owl#SPACESEPARATEDVALUES"/>
+        <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >grd2xyz-operator</pmlp:hasName>
+        <viskoO:hasInputDataType rdf:resource="http://gmt.soest.hawaii.edu/gmt-data.owl#2D_Grid_COARDS"/>
+        <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/NETCDF.owl#NETCDF"/>
+        <rdfs:label>GMT grd2xyz</rdfs:label>
+        <rdfs:comment>Convert NetCDF COARDS compliant dataset to listing of XYZ values</rdfs:comment>
+      </viskoO:Transformer>
+    </viskoS:implementsOperator>
+    <rdfs:label>GMT grd2xyz</rdfs:label>
+    <rdfs:comment>Convert NetCDF COARDS compliant dataset to listing of XYZ values</rdfs:comment>
+  </viskoS:Service>
   <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#psxy">
     <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/psxy.owl#psxyService"/>
     <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_gmt.owl#gmt"/>
@@ -313,7 +368,7 @@
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >psxy-operator</pmlp:hasName>
         <viskoO:mapsTo rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-view.owl#2D_PointMap"/>
-        <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#d18"/>
+        <viskoO:hasInputDataType rdf:resource="http://rio.cs.utep.edu/ciserver/ciprojects/CrustalModeling/CrustalModeling.owl#FieldTrimmedGravityData"/>
         <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/SPACESEPARATEDVALUES.owl#SPACESEPARATEDVALUES"/>
         <rdfs:label>GMT psxy</rdfs:label>
         <rdfs:comment>Generate 2D Plot of point data</rdfs:comment>

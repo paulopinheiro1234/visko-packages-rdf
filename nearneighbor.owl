@@ -83,8 +83,8 @@
   <grounding:WsdlAtomicProcessGrounding rdf:about="#nearneighborAtomicProcessGrounding">
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#S</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#S"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#R</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#R"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlOperation>
@@ -101,6 +101,12 @@
     </grounding:wsdlOutput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#S</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#S"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#I</grounding:wsdlMessagePart>
         <grounding:owlsParameter rdf:resource="#I"/>
       </grounding:WsdlInputMessageMap>
@@ -109,12 +115,6 @@
       <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#url</grounding:wsdlMessagePart>
         <grounding:owlsParameter rdf:resource="#url"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#R</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#R"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"

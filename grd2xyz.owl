@@ -2,7 +2,7 @@
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
-    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter2D.owl"
+    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/grd2xyz.owl"
     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
     xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -12,20 +12,20 @@
     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
     xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkContourFilter2D.owl">
-  <service:Service rdf:ID="vtkContourFilterService">
-    <rdfs:label>vtkContourFilter2D</rdfs:label>
+  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/grd2xyz.owl">
+  <service:Service rdf:ID="grd2xyzService">
+    <rdfs:label>GMT grd2xyz</rdfs:label>
     <service:supports>
-      <grounding:WsdlGrounding rdf:ID="vtkContourFilterGrounding"/>
+      <grounding:WsdlGrounding rdf:ID="grd2xyzGrounding"/>
     </service:supports>
     <service:describedBy>
-      <process:AtomicProcess rdf:ID="vtkContourFilterProcess"/>
+      <process:AtomicProcess rdf:ID="grd2xyzProcess"/>
     </service:describedBy>
     <service:presents>
-      <profile:Profile rdf:ID="vtkContourFilterProfile"/>
+      <profile:Profile rdf:ID="grd2xyzProfile"/>
     </service:presents>
   </service:Service>
-  <profile:Profile rdf:about="#vtkContourFilterProfile">
+  <profile:Profile rdf:about="#grd2xyzProfile">
     <profile:hasOutput>
       <process:Output rdf:ID="return">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
@@ -34,17 +34,10 @@
       </process:Output>
     </profile:hasOutput>
     <profile:hasInput>
-      <process:Input rdf:ID="scalarRange">
+      <process:Input rdf:ID="N">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>scalarRange</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <profile:hasInput>
-      <process:Input rdf:ID="numContours">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>numContours</rdfs:label>
+        <rdfs:label>N</rdfs:label>
       </process:Input>
     </profile:hasInput>
     <profile:hasInput>
@@ -55,24 +48,23 @@
       </process:Input>
     </profile:hasInput>
     <profile:textDescription>This is a VisKo/OWLS Service.</profile:textDescription>
-    <profile:serviceName>vtkContourFilter</profile:serviceName>
-    <service:presentedBy rdf:resource="#vtkContourFilterService"/>
+    <profile:serviceName>grd2xyz</profile:serviceName>
+    <service:presentedBy rdf:resource="#grd2xyzService"/>
   </profile:Profile>
-  <process:AtomicProcess rdf:about="#vtkContourFilterProcess">
+  <process:AtomicProcess rdf:about="#grd2xyzProcess">
     <process:hasOutput rdf:resource="#return"/>
-    <process:hasInput rdf:resource="#scalarRange"/>
-    <process:hasInput rdf:resource="#numContours"/>
+    <process:hasInput rdf:resource="#N"/>
     <process:hasInput rdf:resource="#url"/>
-    <service:describes rdf:resource="#vtkContourFilterService"/>
-    <rdfs:label>vtkContourFilterProcess</rdfs:label>
+    <service:describes rdf:resource="#grd2xyzService"/>
+    <rdfs:label>grd2xyzProcess</rdfs:label>
   </process:AtomicProcess>
-  <grounding:WsdlGrounding rdf:about="#vtkContourFilterGrounding">
+  <grounding:WsdlGrounding rdf:about="#grd2xyzGrounding">
     <grounding:hasAtomicProcessGrounding>
-      <grounding:WsdlAtomicProcessGrounding rdf:ID="vtkContourFilterAtomicProcessGrounding"/>
+      <grounding:WsdlAtomicProcessGrounding rdf:ID="grd2xyzAtomicProcessGrounding"/>
     </grounding:hasAtomicProcessGrounding>
-    <service:supportedBy rdf:resource="#vtkContourFilterService"/>
+    <service:supportedBy rdf:resource="#grd2xyzService"/>
   </grounding:WsdlGrounding>
-  <grounding:WsdlAtomicProcessGrounding rdf:about="#vtkContourFilterAtomicProcessGrounding">
+  <grounding:WsdlAtomicProcessGrounding rdf:about="#grd2xyzAtomicProcessGrounding">
     <grounding:wsdlOutput>
       <grounding:WsdlOutputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
@@ -81,18 +73,8 @@
     </grounding:wsdlOutput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#numContours</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#numContours"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#vtkContourFilterRequest</grounding:wsdlInputMessage>
-    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#scalarRange</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#scalarRange"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#N</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#N"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlInput>
@@ -101,14 +83,18 @@
         <grounding:owlsParameter rdf:resource="#url"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
+    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://services.trustlab.utep.edu#grd2xyzResponse</grounding:wsdlOutputMessage>
+    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://services.trustlab.utep.edu#grd2xyzRequest</grounding:wsdlInputMessage>
+    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
     <grounding:wsdlOperation>
       <grounding:WsdlOperationRef>
         <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#vtkContourFilter</grounding:operation>
+        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#grd2xyz</grounding:operation>
       </grounding:WsdlOperationRef>
     </grounding:wsdlOperation>
-    <grounding:owlsProcess rdf:resource="#vtkContourFilterProcess"/>
-    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#vtkContourFilterResponse</grounding:wsdlOutputMessage>
+    <grounding:owlsProcess rdf:resource="#grd2xyzProcess"/>
   </grounding:WsdlAtomicProcessGrounding>
 </rdf:RDF>

@@ -6,46 +6,47 @@
     xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/psxyz.owl"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl"
     xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
     xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/vtkVolume.owl">
-  <service:Service rdf:ID="vtkVolumeService">
-    <rdfs:label>vtkVolume</rdfs:label>
+  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/psxyz.owl">
+  <service:Service rdf:ID="psxyzService">
+    <rdfs:label>GMT psxyz</rdfs:label>
     <service:supports>
-      <grounding:WsdlGrounding rdf:ID="vtkVolumeGrounding"/>
+      <grounding:WsdlGrounding rdf:ID="psxyzGrounding"/>
     </service:supports>
     <service:describedBy>
-      <process:AtomicProcess rdf:ID="vtkVolumeProcess"/>
+      <process:AtomicProcess rdf:ID="psxyzProcess"/>
     </service:describedBy>
     <service:presents>
-      <profile:Profile rdf:ID="vtkVolumeProfile"/>
+      <profile:Profile rdf:ID="psxyzProfile"/>
     </service:presents>
   </service:Service>
-  <profile:Profile rdf:about="#vtkVolumeProfile">
+  <profile:Profile rdf:about="#psxyzProfile">
     <profile:hasInput>
-      <process:Input rdf:ID="size">
+      <process:Input rdf:ID="W">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>size</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <service:presentedBy rdf:resource="#vtkVolumeService"/>
-    <profile:hasInput>
-      <process:Input rdf:ID="opacityFunction">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>opacityFunction</rdfs:label>
+        <rdfs:label>W</rdfs:label>
       </process:Input>
     </profile:hasInput>
     <profile:hasInput>
-      <process:Input rdf:ID="url">
+      <process:Input rdf:ID="S">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>url</rdfs:label>
+        <rdfs:label>S</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
+    <service:presentedBy rdf:resource="#psxyzService"/>
+    <profile:textDescription>This is a VisKo/OWLS Service.</profile:textDescription>
+    <profile:hasInput>
+      <process:Input rdf:ID="J">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>J</rdfs:label>
       </process:Input>
     </profile:hasInput>
     <profile:hasOutput>
@@ -56,78 +57,78 @@
       </process:Output>
     </profile:hasOutput>
     <profile:hasInput>
-      <process:Input rdf:ID="colorFunction">
+      <process:Input rdf:ID="G">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>colorFunction</rdfs:label>
+        <rdfs:label>G</rdfs:label>
       </process:Input>
     </profile:hasInput>
-    <profile:textDescription>This is a VisKo/OWLS Service.</profile:textDescription>
+    <profile:serviceName>psxyz</profile:serviceName>
     <profile:hasInput>
-      <process:Input rdf:ID="xRotation">
+      <process:Input rdf:ID="url">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>xRotation</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <profile:hasInput>
-      <process:Input rdf:ID="zRotation">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>zRotation</rdfs:label>
+        <rdfs:label>url</rdfs:label>
       </process:Input>
     </profile:hasInput>
     <profile:hasInput>
-      <process:Input rdf:ID="magnification">
+      <process:Input rdf:ID="B">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>magnification</rdfs:label>
+        <rdfs:label>B</rdfs:label>
       </process:Input>
     </profile:hasInput>
     <profile:hasInput>
-      <process:Input rdf:ID="backgroundColor">
+      <process:Input rdf:ID="E">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>backgroundColor</rdfs:label>
+        <rdfs:label>E</rdfs:label>
       </process:Input>
     </profile:hasInput>
     <profile:hasInput>
-      <process:Input rdf:ID="yRotation">
+      <process:Input rdf:ID="JZ">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>yRotation</rdfs:label>
+        <rdfs:label>JZ</rdfs:label>
       </process:Input>
     </profile:hasInput>
-    <profile:serviceName>vtkVolume</profile:serviceName>
+    <profile:hasInput>
+      <process:Input rdf:ID="R">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>R</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
   </profile:Profile>
-  <process:AtomicProcess rdf:about="#vtkVolumeProcess">
-    <process:hasInput rdf:resource="#opacityFunction"/>
-    <process:hasInput rdf:resource="#xRotation"/>
-    <process:hasInput rdf:resource="#size"/>
-    <process:hasInput rdf:resource="#backgroundColor"/>
-    <service:describes rdf:resource="#vtkVolumeService"/>
+  <process:AtomicProcess rdf:about="#psxyzProcess">
+    <process:hasInput rdf:resource="#W"/>
     <process:hasInput rdf:resource="#url"/>
-    <process:hasInput rdf:resource="#colorFunction"/>
-    <process:hasInput rdf:resource="#magnification"/>
+    <process:hasInput rdf:resource="#S"/>
+    <process:hasInput rdf:resource="#R"/>
+    <process:hasInput rdf:resource="#G"/>
+    <process:hasInput rdf:resource="#JZ"/>
+    <rdfs:label>psxyzProcess</rdfs:label>
+    <process:hasInput rdf:resource="#J"/>
+    <process:hasInput rdf:resource="#B"/>
+    <process:hasInput rdf:resource="#E"/>
     <process:hasOutput rdf:resource="#return"/>
-    <process:hasInput rdf:resource="#zRotation"/>
-    <process:hasInput rdf:resource="#yRotation"/>
-    <rdfs:label>vtkVolumeProcess</rdfs:label>
+    <service:describes rdf:resource="#psxyzService"/>
   </process:AtomicProcess>
-  <grounding:WsdlGrounding rdf:about="#vtkVolumeGrounding">
+  <grounding:WsdlGrounding rdf:about="#psxyzGrounding">
     <grounding:hasAtomicProcessGrounding>
-      <grounding:WsdlAtomicProcessGrounding rdf:ID="vtkVolumeAtomicProcessGrounding"/>
+      <grounding:WsdlAtomicProcessGrounding rdf:ID="psxyzAtomicProcessGrounding"/>
     </grounding:hasAtomicProcessGrounding>
-    <service:supportedBy rdf:resource="#vtkVolumeService"/>
+    <service:supportedBy rdf:resource="#psxyzService"/>
   </grounding:WsdlGrounding>
-  <grounding:WsdlAtomicProcessGrounding rdf:about="#vtkVolumeAtomicProcessGrounding">
-    <grounding:owlsProcess rdf:resource="#vtkVolumeProcess"/>
+  <grounding:WsdlAtomicProcessGrounding rdf:about="#psxyzAtomicProcessGrounding">
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#xRotation</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#xRotation"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#G</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#G"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
+    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://services.trustlab.utep.edu#psxyzRequest</grounding:wsdlInputMessage>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#url</grounding:wsdlMessagePart>
@@ -136,44 +137,35 @@
     </grounding:wsdlInput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#yRotation</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#yRotation"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#W</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#W"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#zRotation</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#zRotation"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#E</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#E"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#S</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#S"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#vtkVolumeResponse</grounding:wsdlOutputMessage>
-    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#vtkVolumeRequest</grounding:wsdlInputMessage>
+    >http://services.trustlab.utep.edu#psxyzResponse</grounding:wsdlOutputMessage>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#colorFunction</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#colorFunction"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#R</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#R"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
+    <grounding:owlsProcess rdf:resource="#psxyzProcess"/>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#size</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#size"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#backgroundColor</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#backgroundColor"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#magnification</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#magnification"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#JZ</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#JZ"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlOutput>
@@ -182,16 +174,24 @@
         <grounding:owlsParameter rdf:resource="#return"/>
       </grounding:WsdlOutputMessageMap>
     </grounding:wsdlOutput>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#J</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#J"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
     <grounding:wsdlOperation>
       <grounding:WsdlOperationRef>
         <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#vtkVolume</grounding:operation>
+        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#psxyz</grounding:operation>
       </grounding:WsdlOperationRef>
     </grounding:wsdlOperation>
+    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#opacityFunction</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#opacityFunction"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#B</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#B"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
   </grounding:WsdlAtomicProcessGrounding>
