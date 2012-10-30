@@ -6,13 +6,13 @@
     xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/surfacePlotter.owl"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
     xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
-    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/surfacePlotter.owl"
     xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/surfacePlotter.owl">
+  xml:base="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/surfacePlotter.owl">
   <service:Service rdf:ID="surfacePlotterService">
     <rdfs:label>Create a surface plot of color values contained in an image</rdfs:label>
     <service:supports>
@@ -27,10 +27,17 @@
   </service:Service>
   <profile:Profile rdf:about="#surfacePlotterProfile">
     <profile:hasInput>
-      <process:Input rdf:ID="smooth">
+      <process:Input rdf:ID="polygonMultiplier">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>smooth</rdfs:label>
+        <rdfs:label>polygonMultiplier</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
+    <profile:hasInput>
+      <process:Input rdf:ID="blackFill">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>blackFill</rdfs:label>
       </process:Input>
     </profile:hasInput>
     <profile:serviceName>surfacePlotter</profile:serviceName>
@@ -41,22 +48,6 @@
         <rdfs:label>whiteBackground</rdfs:label>
       </process:Input>
     </profile:hasInput>
-    <service:presentedBy rdf:resource="#surfacePlotterService"/>
-    <profile:hasInput>
-      <process:Input rdf:ID="blackFill">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>blackFill</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <profile:hasInput>
-      <process:Input rdf:ID="url">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>url</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <profile:textDescription>This is a VisKo/OWLS Service.</profile:textDescription>
     <profile:hasOutput>
       <process:Output rdf:ID="return">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
@@ -65,12 +56,13 @@
       </process:Output>
     </profile:hasOutput>
     <profile:hasInput>
-      <process:Input rdf:ID="showWireframe">
+      <process:Input rdf:ID="url">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>showWireframe</rdfs:label>
+        <rdfs:label>url</rdfs:label>
       </process:Input>
     </profile:hasInput>
+    <service:presentedBy rdf:resource="#surfacePlotterService"/>
     <profile:hasInput>
       <process:Input rdf:ID="plotWidth">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
@@ -79,10 +71,17 @@
       </process:Input>
     </profile:hasInput>
     <profile:hasInput>
-      <process:Input rdf:ID="showGrayscale">
+      <process:Input rdf:ID="smooth">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>showGrayscale</rdfs:label>
+        <rdfs:label>smooth</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
+    <profile:hasInput>
+      <process:Input rdf:ID="showWireframe">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>showWireframe</rdfs:label>
       </process:Input>
     </profile:hasInput>
     <profile:hasInput>
@@ -92,27 +91,28 @@
         <rdfs:label>showAxis</rdfs:label>
       </process:Input>
     </profile:hasInput>
+    <profile:textDescription>This is a VisKo/OWLS Service.</profile:textDescription>
     <profile:hasInput>
-      <process:Input rdf:ID="polygonMultiplier">
+      <process:Input rdf:ID="showGrayscale">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>polygonMultiplier</rdfs:label>
+        <rdfs:label>showGrayscale</rdfs:label>
       </process:Input>
     </profile:hasInput>
   </profile:Profile>
   <process:AtomicProcess rdf:about="#surfacePlotterProcess">
     <process:hasInput rdf:resource="#whiteBackground"/>
-    <process:hasInput rdf:resource="#blackFill"/>
-    <rdfs:label>surfacePlotterProcess</rdfs:label>
-    <process:hasOutput rdf:resource="#return"/>
-    <service:describes rdf:resource="#surfacePlotterService"/>
-    <process:hasInput rdf:resource="#polygonMultiplier"/>
-    <process:hasInput rdf:resource="#smooth"/>
-    <process:hasInput rdf:resource="#showGrayscale"/>
     <process:hasInput rdf:resource="#url"/>
+    <process:hasOutput rdf:resource="#return"/>
     <process:hasInput rdf:resource="#showWireframe"/>
     <process:hasInput rdf:resource="#plotWidth"/>
+    <service:describes rdf:resource="#surfacePlotterService"/>
     <process:hasInput rdf:resource="#showAxis"/>
+    <rdfs:label>surfacePlotterProcess</rdfs:label>
+    <process:hasInput rdf:resource="#blackFill"/>
+    <process:hasInput rdf:resource="#smooth"/>
+    <process:hasInput rdf:resource="#polygonMultiplier"/>
+    <process:hasInput rdf:resource="#showGrayscale"/>
   </process:AtomicProcess>
   <grounding:WsdlGrounding rdf:about="#surfacePlotterGrounding">
     <grounding:hasAtomicProcessGrounding>
@@ -121,10 +121,21 @@
     <service:supportedBy rdf:resource="#surfacePlotterService"/>
   </grounding:WsdlGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:about="#surfacePlotterAtomicProcessGrounding">
-    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#surfacePlotterResponse</grounding:wsdlOutputMessage>
-    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#surfacePlotterRequest</grounding:wsdlInputMessage>
+    <grounding:wsdlOutput>
+      <grounding:WsdlOutputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#return"/>
+      </grounding:WsdlOutputMessageMap>
+    </grounding:wsdlOutput>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#blackFill</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#blackFill"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
+    <grounding:owlsProcess rdf:resource="#surfacePlotterProcess"/>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#polygonMultiplier</grounding:wsdlMessagePart>
@@ -133,14 +144,8 @@
     </grounding:wsdlInput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#blackFill</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#blackFill"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#plotWidth</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#plotWidth"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#showAxis</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#showAxis"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlOperation>
@@ -151,8 +156,28 @@
     </grounding:wsdlOperation>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#plotWidth</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#plotWidth"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://services.trustlab.utep.edu#surfacePlotterRequest</grounding:wsdlInputMessage>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#smooth</grounding:wsdlMessagePart>
         <grounding:owlsParameter rdf:resource="#smooth"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#showGrayscale</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#showGrayscale"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#showWireframe</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#showWireframe"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlInput>
@@ -163,36 +188,11 @@
     </grounding:wsdlInput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#showAxis</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#showAxis"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#showWireframe</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#showWireframe"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#whiteBackground</grounding:wsdlMessagePart>
         <grounding:owlsParameter rdf:resource="#whiteBackground"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
-    <grounding:owlsProcess rdf:resource="#surfacePlotterProcess"/>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#showGrayscale</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#showGrayscale"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlOutput>
-      <grounding:WsdlOutputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#return"/>
-      </grounding:WsdlOutputMessageMap>
-    </grounding:wsdlOutput>
+    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://services.trustlab.utep.edu#surfacePlotterResponse</grounding:wsdlOutputMessage>
   </grounding:WsdlAtomicProcessGrounding>
 </rdf:RDF>

@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <rdf:RDF
-    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/csv2tabular.owl"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
@@ -9,10 +8,11 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
     xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
+    xmlns="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/csv2tabular.owl"
     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
     xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/csv2tabular.owl">
+  xml:base="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/csv2tabular.owl">
   <service:Service rdf:ID="csv2tabularService">
     <rdfs:label>csv2tabular</rdfs:label>
     <service:supports>

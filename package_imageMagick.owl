@@ -9,16 +9,16 @@
     xmlns:pmlp="http://inference-web.org/2.0/pml-provenance.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:viskoO="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-operator.owl#">
-  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_imageMagick.owl#spherize">
-    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/spherize.owl#spherizeService"/>
+  <viskoS:Service rdf:about="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_imageMagick.owl#spherize">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/spherize.owl#spherizeService"/>
     <viskoS:supportedByToolkit>
-      <viskoS:Toolkit rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_imageMagick.owl#image-magick">
+      <viskoS:Toolkit rdf:about="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_imageMagick.owl#image-magick">
         <rdfs:label>ImageMagick</rdfs:label>
         <rdfs:comment>ImageMagick</rdfs:comment>
       </viskoS:Toolkit>
     </viskoS:supportedByToolkit>
     <viskoS:implementsOperator>
-      <viskoO:Transformer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_imageMagick.owl#spherize-operator">
+      <viskoO:Transformer rdf:about="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_imageMagick.owl#spherize-operator">
         <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PNG.owl#PNG"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -33,11 +33,11 @@
     <rdfs:label>spherize</rdfs:label>
     <rdfs:comment>Wraps a Portable Network Graphic (PNG) image around a spherical surface</rdfs:comment>
   </viskoS:Service>
-  <viskoS:Service rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_imageMagick.owl#fits2png">
-    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/fits2png.owl#fits2pngService"/>
-    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_imageMagick.owl#image-magick"/>
+  <viskoS:Service rdf:about="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_imageMagick.owl#fits2png">
+    <viskoS:supportedByOWLSService rdf:resource="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/fits2png.owl#fits2pngService"/>
+    <viskoS:supportedByToolkit rdf:resource="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_imageMagick.owl#image-magick"/>
     <viskoS:implementsOperator>
-      <viskoO:Converter rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_imageMagick.owl#fits2png-operator">
+      <viskoO:Converter rdf:about="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_imageMagick.owl#fits2png-operator">
         <viskoO:hasOutputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <viskoO:hasOutputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PNG.owl#PNG"/>
         <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"

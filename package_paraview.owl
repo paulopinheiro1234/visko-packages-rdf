@@ -9,9 +9,9 @@
     xmlns:pmlp="http://inference-web.org/2.0/pml-provenance.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:viskoO="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-operator.owl#">
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_paraview.owl#xdmf-viewer">
+  <viskoO:Viewer rdf:about="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_paraview.owl#xdmf-viewer">
     <viskoO:partOfViewerSet>
-      <viskoO:ViewerSet rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_paraview.owl#paraview">
+      <viskoO:ViewerSet rdf:about="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_paraview.owl#paraview">
         <rdfs:label>Kitware Paraview</rdfs:label>
         <rdfs:comment>Kitware Paraview</rdfs:comment>
       </viskoO:ViewerSet>

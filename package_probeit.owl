@@ -9,38 +9,41 @@
     xmlns:pmlp="http://inference-web.org/2.0/pml-provenance.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:viskoO="https://raw.github.com/nicholasdelrio/visko/master/resources/ontology/visko-operator.owl#">
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_probeit.owl#probeit-imagej-viewer">
-    <rdfs:comment>ImageJ is a public domain Java image processing program inspired by NIH Image</rdfs:comment>
-    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/FITS.owl#FITS"/>
-    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/RAW.owl#RAW"/>
-    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
-    <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >probeit-imagej-viewer</pmlp:hasName>
-    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PDF.owl#PDF"/>
-    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/TIFF.owl#TIFF"/>
-    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PNG.owl#PNG"/>
-    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/DICOM.owl#DICOM"/>
-    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/GIF.owl#GIF"/>
+  <viskoO:Viewer rdf:about="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_probeit.owl#probeit-imagej-viewer">
     <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/JPEG.owl#JPEG"/>
     <rdfs:label>ImageJ Viewer</rdfs:label>
     <viskoO:partOfViewerSet>
-      <viskoO:ViewerSet rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_probeit.owl#probeit">
+      <viskoO:ViewerSet rdf:about="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_probeit.owl#probeit">
         <rdfs:label>Probe-It!</rdfs:label>
         <rdfs:comment>Probe-It! Provenance Browser</rdfs:comment>
       </viskoO:ViewerSet>
     </viskoO:partOfViewerSet>
-  </viskoO:Viewer>
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_probeit.owl#probeit-pdf-viewer">
-    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_probeit.owl#probeit"/>
-    <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >probeit-pdf-viewer</pmlp:hasName>
-    <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/DICOM.owl#DICOM"/>
+    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/RAW.owl#RAW"/>
+    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/GIF.owl#GIF"/>
     <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PDF.owl#PDF"/>
-    <rdfs:label>Adobe Portable Document Format (PDF) Viewer</rdfs:label>
-    <rdfs:comment>Renders PDF document and allows for zooming.</rdfs:comment>
+    <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >probeit-imagej-viewer</pmlp:hasName>
+    <rdfs:comment>ImageJ is a public domain Java image processing program inspired by NIH Image</rdfs:comment>
+    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/FITS.owl#FITS"/>
+    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/TIFF.owl#TIFF"/>
+    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PNG.owl#PNG"/>
   </viskoO:Viewer>
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_probeit.owl#probeit-html-viewer">
-    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_probeit.owl#probeit"/>
+  <viskoO:Viewer rdf:about="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_probeit.owl#probeit-text-viewer">
+    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
+    <rdfs:label>Plain Text Viewer</rdfs:label>
+    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_probeit.owl#probeit"/>
+    <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PLAINTEXT.owl#PLAINTEXT"/>
+    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PLAIN.owl#PLAIN"/>
+    <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >probeit-text-viewer</pmlp:hasName>
+    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VNDLATEXZ.owl#VNDLATEXZ"/>
+    <rdfs:comment>Just a plain old text viewer</rdfs:comment>
+  </viskoO:Viewer>
+  <viskoO:Viewer rdf:about="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_probeit.owl#probeit-html-viewer">
+    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_probeit.owl#probeit"/>
     <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >probeit-html-viewer</pmlp:hasName>
     <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -48,20 +51,17 @@
     <rdfs:label>HyperText Markup Language (HTML) Viewer</rdfs:label>
     <rdfs:comment>Renders HTML documents.</rdfs:comment>
   </viskoO:Viewer>
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_probeit.owl#probeit-text-viewer">
-    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_probeit.owl#probeit"/>
+  <viskoO:Viewer rdf:about="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_probeit.owl#probeit-pdf-viewer">
+    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_probeit.owl#probeit"/>
     <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >probeit-text-viewer</pmlp:hasName>
-    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/VNDLATEXZ.owl#VNDLATEXZ"/>
+    >probeit-pdf-viewer</pmlp:hasName>
     <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <rdfs:comment>Just a plain old text viewer</rdfs:comment>
-    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PLAINTEXT.owl#PLAINTEXT"/>
-    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PLAIN.owl#PLAIN"/>
-    <rdfs:label>Plain Text Viewer</rdfs:label>
-    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/POSTSCRIPT.owl#POSTSCRIPT"/>
+    <viskoO:hasInputFormat rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/formats/PDF.owl#PDF"/>
+    <rdfs:label>Adobe Portable Document Format (PDF) Viewer</rdfs:label>
+    <rdfs:comment>Renders PDF document and allows for zooming.</rdfs:comment>
   </viskoO:Viewer>
-  <viskoO:Viewer rdf:about="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_probeit.owl#parvis-viewer">
-    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/package_probeit.owl#probeit"/>
+  <viskoO:Viewer rdf:about="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_probeit.owl#parvis-viewer">
+    <viskoO:partOfViewerSet rdf:resource="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/package_probeit.owl#probeit"/>
     <pmlp:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >parvis-viewer</pmlp:hasName>
     <viskoO:hasInputDataType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>

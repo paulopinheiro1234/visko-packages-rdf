@@ -7,12 +7,12 @@
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/int2Short.owl"
     xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
+    xmlns="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/int2Short.owl"
     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
     xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/int2Short.owl">
+  xml:base="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/int2Short.owl">
   <service:Service rdf:ID="int2ShortService">
     <rdfs:label>int2Short</rdfs:label>
     <service:supports>

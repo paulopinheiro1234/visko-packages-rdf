@@ -8,11 +8,11 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
     xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
+    xmlns="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/psxy.owl"
     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
     xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/psxy.owl"
-  xml:base="https://raw.github.com/nicholasdelrio/visko-packages-rdf/master/psxy.owl">
+  xml:base="https://raw.github.com/paulopinheiro1234/visko-packages-rdf/master/psxy.owl">
   <service:Service rdf:ID="psxyService">
     <rdfs:label>GMT psxy</rdfs:label>
     <service:supports>
@@ -26,14 +26,7 @@
     </service:presents>
   </service:Service>
   <profile:Profile rdf:about="#psxyProfile">
-    <service:presentedBy rdf:resource="#psxyService"/>
-    <profile:hasInput>
-      <process:Input rdf:ID="B">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>B</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
+    <profile:textDescription>This is a VisKo/OWLS Service.</profile:textDescription>
     <profile:hasInput>
       <process:Input rdf:ID="url">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
@@ -42,34 +35,14 @@
       </process:Input>
     </profile:hasInput>
     <profile:hasInput>
-      <process:Input rdf:ID="G">
+      <process:Input rdf:ID="indexOfX">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>G</rdfs:label>
+        <rdfs:label>indexOfX</rdfs:label>
       </process:Input>
     </profile:hasInput>
+    <service:presentedBy rdf:resource="#psxyService"/>
     <profile:serviceName>psxy</profile:serviceName>
-    <profile:hasInput>
-      <process:Input rdf:ID="S">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>S</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <profile:hasInput>
-      <process:Input rdf:ID="indexOfY">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>indexOfY</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
-    <profile:hasInput>
-      <process:Input rdf:ID="R">
-        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>R</rdfs:label>
-      </process:Input>
-    </profile:hasInput>
     <profile:hasOutput>
       <process:Output rdf:ID="return">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
@@ -77,12 +50,11 @@
         <rdfs:label>return</rdfs:label>
       </process:Output>
     </profile:hasOutput>
-    <profile:textDescription>This is a VisKo/OWLS Service.</profile:textDescription>
     <profile:hasInput>
-      <process:Input rdf:ID="indexOfX">
+      <process:Input rdf:ID="S">
         <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-        <rdfs:label>indexOfX</rdfs:label>
+        <rdfs:label>S</rdfs:label>
       </process:Input>
     </profile:hasInput>
     <profile:hasInput>
@@ -92,19 +64,47 @@
         <rdfs:label>J</rdfs:label>
       </process:Input>
     </profile:hasInput>
+    <profile:hasInput>
+      <process:Input rdf:ID="B">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>B</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
+    <profile:hasInput>
+      <process:Input rdf:ID="G">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>G</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
+    <profile:hasInput>
+      <process:Input rdf:ID="R">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>R</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
+    <profile:hasInput>
+      <process:Input rdf:ID="indexOfY">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>indexOfY</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
   </profile:Profile>
   <process:AtomicProcess rdf:about="#psxyProcess">
+    <process:hasInput rdf:resource="#indexOfY"/>
+    <process:hasInput rdf:resource="#url"/>
+    <process:hasInput rdf:resource="#indexOfX"/>
+    <service:describes rdf:resource="#psxyService"/>
+    <process:hasInput rdf:resource="#J"/>
     <process:hasInput rdf:resource="#G"/>
     <process:hasInput rdf:resource="#S"/>
-    <process:hasInput rdf:resource="#B"/>
-    <process:hasInput rdf:resource="#indexOfX"/>
-    <rdfs:label>psxyProcess</rdfs:label>
-    <process:hasInput rdf:resource="#url"/>
-    <process:hasInput rdf:resource="#R"/>
-    <service:describes rdf:resource="#psxyService"/>
     <process:hasOutput rdf:resource="#return"/>
-    <process:hasInput rdf:resource="#indexOfY"/>
-    <process:hasInput rdf:resource="#J"/>
+    <process:hasInput rdf:resource="#R"/>
+    <rdfs:label>psxyProcess</rdfs:label>
+    <process:hasInput rdf:resource="#B"/>
   </process:AtomicProcess>
   <grounding:WsdlGrounding rdf:about="#psxyGrounding">
     <grounding:hasAtomicProcessGrounding>
@@ -113,12 +113,18 @@
     <service:supportedBy rdf:resource="#psxyService"/>
   </grounding:WsdlGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:about="#psxyAtomicProcessGrounding">
-    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#psxyRequest</grounding:wsdlInputMessage>
+    <grounding:wsdlOperation>
+      <grounding:WsdlOperationRef>
+        <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#psxy</grounding:operation>
+      </grounding:WsdlOperationRef>
+    </grounding:wsdlOperation>
+    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://services.trustlab.utep.edu#psxyResponse</grounding:wsdlOutputMessage>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#S</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#S"/>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#indexOfY</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#indexOfY"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
     <grounding:wsdlInput>
@@ -127,19 +133,15 @@
         <grounding:owlsParameter rdf:resource="#indexOfX"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
-    <grounding:owlsProcess rdf:resource="#psxyProcess"/>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#R</grounding:wsdlMessagePart>
         <grounding:owlsParameter rdf:resource="#R"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
-    <grounding:wsdlOperation>
-      <grounding:WsdlOperationRef>
-        <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-        >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#psxy</grounding:operation>
-      </grounding:WsdlOperationRef>
-    </grounding:wsdlOperation>
+    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
+    <grounding:owlsProcess rdf:resource="#psxyProcess"/>
     <grounding:wsdlOutput>
       <grounding:WsdlOutputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#return</grounding:wsdlMessagePart>
@@ -148,14 +150,24 @@
     </grounding:wsdlOutput>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#S</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#S"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#url</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="#url"/>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://services.trustlab.utep.edu#psxyRequest</grounding:wsdlInputMessage>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#G</grounding:wsdlMessagePart>
         <grounding:owlsParameter rdf:resource="#G"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
-    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://services.trustlab.utep.edu#psxyResponse</grounding:wsdlOutputMessage>
-    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl</grounding:wsdlDocument>
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#B</grounding:wsdlMessagePart>
@@ -166,18 +178,6 @@
       <grounding:WsdlInputMessageMap>
         <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#J</grounding:wsdlMessagePart>
         <grounding:owlsParameter rdf:resource="#J"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#indexOfY</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#indexOfY"/>
-      </grounding:WsdlInputMessageMap>
-    </grounding:wsdlInput>
-    <grounding:wsdlInput>
-      <grounding:WsdlInputMessageMap>
-        <grounding:wsdlMessagePart>http://iw.cs.utep.edu:8080/toolkits/services/ToolkitServices?wsdl#url</grounding:wsdlMessagePart>
-        <grounding:owlsParameter rdf:resource="#url"/>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
   </grounding:WsdlAtomicProcessGrounding>
